@@ -1,0 +1,35 @@
+.contactDiv {
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 8%;
+}
+.contactForm {
+    flex: 4;
+}
+.contactDiv ul {
+    flex: 1;
+    padding-left: 2%;
+    @media all and (max-width: $break-1){
+        display: flex;
+        margin-top: 5%;
+        padding-left: 0;
+        li {
+            padding: 2%;
+        }
+    }
+}
+.contactDiv .contactText {
+    flex: 2;
+}
+.contactForm .formContent {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color: $green2;
+    padding: 2%;
+    margin-bottom: 5%;
+}
+.contactForm textarea {
+    height: 150px;
+}

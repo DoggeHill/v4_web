@@ -1,1 +1,268 @@
-null
+@charset "UTF-8";
+/*
+Author: Samuel Slávik
+Version: 1.0
+ */
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: green;
+}
+
+.displayFlex {
+  display: flex;
+  position: relative;
+}
+@media all and (max-width: 768px) {
+  .displayFlex {
+    display: block;
+  }
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  color: green;
+}
+
+.iconsList {
+  list-style-type: none;
+  line-height: 5em;
+  padding: 0%;
+  text-align: center;
+}
+@media all and (max-width: 768px) {
+  .iconsList {
+    display: flex;
+    margin-top: 5%;
+    padding-left: 0;
+  }
+  .iconsList li {
+    padding: 2%;
+  }
+}
+
+.contactDiv {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 8%;
+}
+
+.contactForm {
+  flex: 4;
+}
+
+.contactDiv ul {
+  flex: 1;
+  padding-left: 2%;
+}
+@media all and (max-width: 768px) {
+  .contactDiv ul {
+    display: flex;
+    margin-top: 5%;
+    padding-left: 0;
+  }
+  .contactDiv ul li {
+    padding: 2%;
+  }
+}
+
+.contactDiv .contactText {
+  flex: 2;
+}
+
+.contactForm .formContent {
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  border-color: lightgreen;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.contactForm textarea {
+  height: 150px;
+}
+
+.headline {
+  color: Black;
+  padding: 2% 0% 2% 0%;
+}
+
+.button {
+  background-color: green;
+  color: White;
+  padding: 8px 50px 8px 50px;
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+}
+
+.newsletterDiv {
+  width: 100%;
+  background-color: lightgreen;
+  color: Black;
+  margin-bottom: 8%;
+}
+
+.newsletter {
+  width: 70%;
+  padding: 2% 15% 2% 15%;
+}
+
+.newsletterImg {
+  flex: 1;
+  height: 200px;
+}
+@media all and (max-width: 768px) {
+  .newsletterImg {
+    display: none;
+  }
+}
+
+.newsletterContent {
+  flex: 1;
+}
+
+.newsletterInput {
+  width: 100%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+  border-color: lightgreen;
+  padding: 2%;
+  margin-bottom: 5%;
+}
+
+.headerDiv {
+  width: 70%;
+  padding: 2% 15% 2% 15%;
+  margin-bottom: 8%;
+}
+
+.headerContent {
+  width: 40%;
+  margin-left: 10%;
+  position: relative;
+}
+@media all and (max-width: 768px) {
+  .headerContent {
+    width: 80%;
+  }
+}
+
+.headerContent .button {
+  position: absolute;
+  bottom: 0;
+}
+@media all and (max-width: 768px) {
+  .headerContent .button {
+    position: relative;
+    margin-top: 5%;
+  }
+}
+
+footer {
+  bottom: 0;
+  position: relative;
+  width: 50%;
+  background-color: green;
+  color: White;
+  text-align: left;
+  padding: 5% 25% 5% 25%;
+}
+
+.navigation {
+  position: relative;
+  top: 0;
+  display: flex;
+  height: 100px;
+}
+
+.aboutUsDiv {
+  width: 70%;
+  padding: 2% 15% 2% 15%;
+  margin-bottom: 8%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.aboutUsDiv img {
+  width: 50%;
+  display: flex;
+  height: auto;
+}
+@media all and (max-width: 768px) {
+  .aboutUsDiv img {
+    width: 100%;
+  }
+}
+
+.aboutUsText {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+}
+@media all and (max-width: 768px) {
+  .aboutUsText {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    transform: none;
+    margin-bottom: 5%;
+  }
+}
+
+.aboutUsLeft {
+  float: left;
+}
+@media all and (max-width: 768px) {
+  .aboutUsLeft {
+    float: none;
+  }
+}
+
+.aboutUsRight {
+  float: right;
+}
+@media all and (max-width: 768px) {
+  .aboutUsRight {
+    float: none;
+  }
+}
+
+.aboutUsRightText {
+  float: right;
+  left: 60%;
+}
+@media all and (max-width: 768px) {
+  .aboutUsRightText {
+    float: none;
+    left: 0;
+  }
+}
+
+.aboutUsRow {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  margin-bottom: 5%;
+}
+@media all and (max-width: 768px) {
+  .aboutUsRow {
+    overflow: auto;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

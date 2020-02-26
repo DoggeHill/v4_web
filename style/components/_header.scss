@@ -1,0 +1,21 @@
+.headerDiv {
+    width: 70%;
+    padding: 2% 15% 2% 15%;
+    margin-bottom: 8%;
+}
+.headerContent {
+    width: 40%;
+    margin-left: 10%;
+    position: relative;
+    @media all and (max-width: $break-1){
+        width: 80%;
+    }
+}
+.headerContent .button {
+    position: absolute;
+    bottom: 0;
+    @media all and (max-width: $break-1){
+        position: relative;
+        margin-top: 5%;
+    }
+}
