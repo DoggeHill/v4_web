@@ -1,5 +1,4 @@
 .blogPostsDiv {
-    width: 70%;
     padding: 2% 15% 2% 15%;
     margin-bottom: 8%;
     position: relative;
@@ -7,7 +6,23 @@
     overflow: hidden;
 }
 .blogPost {
-
+    margin: 3% 5% 3% 0;
+    width: 30%;
+    @media all and (max-width: $break-1){
+        width: 100%;
+        margin: 3% 5% 20% 0;
+    }
+}
+.blogPost img {
+    box-sizing: border-box;
+    width: 100%;
+}
+.blogPost h3{
+    margin-top: 1%;
+}
+.blogPost .subBlogHeadline {
+    margin-bottom: 1%;
+    font-size: 1.1em;
 }
 .blogTagsList {
     width: 100%;
