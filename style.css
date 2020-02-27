@@ -3,7 +3,7 @@
 Author: Samuel Slávik
 Version: 1.0
  */
-@import "style/components/blogPostsDiv.css";
+@import "style/components/_blogPostsDiv.css";
 * {
   margin: 0;
 }
