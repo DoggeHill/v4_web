@@ -3,7 +3,6 @@
 Author: Samuel Slávik
 Version: 1.0
  */
-@import "style/components/_blogPostsDiv.css";
 * {
   margin: 0;
 }
@@ -154,6 +153,24 @@ a {
   border-color: lightgreen;
   padding: 2%;
   margin-bottom: 5%;
+}
+
+.blogPostsDiv {
+  width: 70%;
+  padding: 2% 15% 2% 15%;
+  margin-bottom: 8%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.blogTagsList {
+  width: 100%;
+}
+
+.blogTagsList .tag {
+  margin-right: 2%;
+  margin-bottom: 2%;
 }
 
 .headerDiv {
