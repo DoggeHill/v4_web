@@ -22,6 +22,22 @@ a {
     text-decoration: none;
     color: $defaultColor;
 }
+a:hover {
+    text-decoration: none;
+    color: $green1;
+}
+.screenDisplay {
+    display: block;
+    @media all and (max-width: $break-2){
+        display: none !important;
+    }
+}
+.responsiveDisplay {
+    display: none;
+    @media all and (max-width: $break-2){
+        display: block !important;
+    }
+}
 
 
 

@@ -1,3 +1,105 @@
+.navigation {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1%;
+    border-bottom-style: solid;
+    border-bottom-color: $green2;
+    @media all and (max-width: 992px){
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.nav li {
+    width: 100%;
+    text-align: center;
+}
+.nav {
+    display: flex;
+    width: 100%;
+    @media all and (max-width: 992px){
+        display: block;
+    }
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-nav {
+    margin: 0;
+}
+.container-fluid > .navbar-collapse {
+    margin: 0;
+}
+.navbar-brand {
+    float: right;
+    @media all and (max-width: 992px){
+        float: left;
+    }
+}
+.container-fluid {
+    display: flex;
+    width: 100%;
+    padding: 0!important;
+    @media all and (max-width: 992px){
+        display: block;
+    }
+}
+.navbar-collapse {
+    width: 100%;
+    padding: 0!important;
+}
+.navProfileImg {
+    border-radius: 50%;
+    flex: 1;
+    height: 50px;
+    margin: 5px;
+}
+.navProfile div div {
+    flex: 5;
+}
+.navProfile {
+    width: 150% !important;
+    text-align: left !important;
+    @media all and (max-width: 992px){
+        width: 80% !important;
+        .displayFlex {
+            display: flex!important;
+        }
+    }
+}
+.navProfileText {
+    margin-top: 8px;
+    margin-left: 5px;
+}
+.nav li a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    @media all and (max-width: 992px){
+        position: relative;
+        transform: none;
+    }
+}
+.nav li {
+    position: relative !important;
+}
+.navProfile a {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    text-align: left !important;
+    width: auto !important;
+}
+
+
+
+.navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
 .dropdown-menu > ul {
     list-style: none;
     margin: 0;
@@ -11,6 +113,22 @@
     font-weight: 400;
     color: #333;
     white-space: nowrap;
+}
+.navbar-toggle .icon-bar {
+    background-color: $green2;
+}
+.navbar-header {
+    display: none;
+    width: 100%;
+    margin: 0 !important;
+    border-bottom-style: solid;
+    border-bottom-color: $green2;
+    @media all and (max-width: 992px){
+        display: block;
+        width: 100%;
+
+    }
+
 }
 
 @media(min-width:992px) {
