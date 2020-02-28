@@ -77,6 +77,8 @@
     transform: translateY(-50%);
     text-align: center;
     width: 100%;
+    font-weight: bold;
+    font-size: 1.2em;
     @media all and (max-width: 992px){
         position: relative;
         transform: none;
@@ -91,6 +93,9 @@
     transform: none !important;
     text-align: left !important;
     width: auto !important;
+}
+.logOut {
+    font-weight: normal!important;
 }
 
 
