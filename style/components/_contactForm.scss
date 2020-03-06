@@ -30,6 +30,15 @@
     padding: 2%;
     margin-bottom: 5%;
 }
+.formContent {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    border-color: $green2;
+    padding: 2%;
+    margin-bottom: 5%;
+}
 .contactForm textarea {
     height: 150px;
 }
