@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Samuel Slávik, Patrik Hyll">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>V4 Web App</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+
+</head>
+<body>
+
+<!-- ---------------------- NAVIGATION ________________________________________-->
+<div class="navigation">
+    <!--<?php wp_nav ?>-->
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class=" navProfile">
+                    <div class="displayFlex">
+                        <a href="#"><img class="navProfileImg" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png"/></a>
+                        <div class="navProfileText">
+                            <a href="#">Samuel Slavik </a><br/>
+                            <a class="logOut" href="#">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link asd asd <br/>as dasd asd a</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li class="screenDisplay navProfile">
+                        <div class="displayFlex">
+                            <a href="#"><img class="navProfileImg" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png"/></a>
+                            <div class="navProfileText">
+                                <a href="#">Samuel Slavik </a><br/>
+                                <a class="logOut" href="#">Log out</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    </div>
+<!---------------------------- GAME -------------------------------------------------->
+    <div class="gameWrapper">
+        <div class="displayFlex">
+            <ul class="progressBar">
+                <li class="progressLevel activeLevel" id="level1"><button data-index="1" onclick="window.changeLevel(this.dataset.index)">1</button></li>
+                <li class="progressLevel" id="level2"><button data-index="2" onclick="window.changeLevel(this.dataset.index)">2</button></li>
+                <li class="progressLevel" id="level3"><button data-index="3" onclick="window.changeLevel(this.dataset.index)">3</button></li>
+                <li class="progressLevel" id="level4"><button data-index="4" onclick="window.changeLevel(this.dataset.index)">4</button></li>
+                <li class="progressLevel" id="level5"><button data-index="5" onclick="window.changeLevel(this.dataset.index)">5</button></li>
+                <li class="progressLevel" id="level6"><button data-index="6" onclick="window.changeLevel(this.dataset.index)">6</button></li>
+                <li class="progressLevel" id="level7"><button data-index="7" onclick="window.changeLevel(this.dataset.index)">7</button></li>
+                <li class="progressLevel" id="level8"><button data-index="8" onclick="window.changeLevel(this.dataset.index)">8</button></li>
+                <li class="progressLevel" id="level9"><button data-index="9" onclick="window.changeLevel(this.dataset.index)">9</button></li>
+                <li class="progressLevel" id="level10"><button data-index="10" onclick="window.changeLevel(this.dataset.index)">10</button></li>
+            </ul>
+            <div class="gameDiv" id="gameDiv">
+                <div class="gameQuestion animated" id="question1">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                        jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="2" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question2">
+                    <p>second</p>
+                    <form>
+                        <input type="text" class="answer"/>
+                        <input data-index="3" type="submit" onclick="changeLevel(this.dataset.index); return false"/>
+                    </form>
+                </div>
+
+                <div class="gameQuestion animated" id="question3">
+                    <p>third</p>
+                    <form>
+                        <input type="text" class="answer"/>
+                        <input data-index="4" type="submit" onclick="changeLevel(this.dataset.index); return false"/>
+                    </form>
+                </div>
+                <div class="gameQuestion animated" id="question4">
+                    <p>fourth</p>
+                    <form>
+                        <input type="text" class="answer"/>
+                        <input data-index="5" type="submit" onclick="changeLevel(this.dataset.index); return false"/>
+                    </form>
+                </div>
+                <div class="gameQuestion animated" id="question5">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="6" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question6">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="7" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question7">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="8" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question8">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="9" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question9">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="10" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="gameQuestion animated" id="question10">
+                    <div class="gameQuestionContent">
+                        <h2 class="questionHeadline">First headline.....</h2>
+                        <p>ajdfh aisf sdajf skdajf skdajkdjf ashdf hasdf sahdf bshdf hasdbf khasdbf hkskadb fhsda fbhsdaf hskdf hsdf
+                            jasdf shadf sdhf skhfb hsdbf shjdaf hsdaf hjsdf hjsd fhjas fvhjsjad fvhjsda fvhds fjhvasf ah
+                        </p>
+                        <br/>
+                        <form action="" method="post">
+                            <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="button" data-index="11" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+<footer>
+    <p>
+        Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius
+        sit amet, mi. Donec id nisl. Aliquam erat volutpat. Integer fringilla. Duis lobortis,
+        quam non volutpat suscipit, magna sem consequat libero, ac hendrerit urna ante id mi. Qu
+        isque commodo facilisis tellus. Integer sodales lorem sed nisl. Morbi consectetuer ma
+        uris quis odio. Ut dolor lorem, viverra vitae, viverra eu, euismod nec, enim. Lorem
+        ipsum dolor sit amet, consectetuer adipiscing elit.
+    </p>
+</footer>
+
+<script src="js/navigation.js"></script>
+<script src="js/game.js"></script>
+
+</body>
+</html>

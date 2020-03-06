@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b57bf7-42e0-4347-86bb-b7d11b7db067" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/game.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/style/pages/_game.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/abstract/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/abstract/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/components/_blogPostsDiv.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_blogPostsDiv.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/components/_headline.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_headline.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/layout/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/layout/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/_contactForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_contactForm.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +80,13 @@
       <workItem from="1582796447193" duration="3462000" />
       <workItem from="1582799926194" duration="11210000" />
       <workItem from="1582873213345" duration="8000" />
-      <workItem from="1582874256053" duration="1431000" />
+      <workItem from="1582874256053" duration="1507000" />
+      <workItem from="1582888447714" duration="50000" />
+      <workItem from="1583261169735" duration="8206000" />
+      <workItem from="1583342807702" duration="15875000" />
+      <workItem from="1583391474767" duration="8036000" />
+      <workItem from="1583432727380" duration="1424000" />
+      <workItem from="1583481962821" duration="734000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1582794096629</created>
@@ -166,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582818499471</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="i am working">
+      <created>1582875714514</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582875714514</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,18 +207,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582796251988" />
-    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1582818498703">
+    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1582875713496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582818498703" />
+    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582875713496" />
     <state x="285" y="55" key="SettingsEditor" timestamp="1582794017053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="285" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582794017053" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1582818520337">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1582875717636">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582818520337" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1582875717636" />
     <state x="592" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582818385131">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,0 +1,93 @@
+.gameQuestion {
+    display: none;
+    height: 100%;
+}
+#question1 {
+    display: flex;
+}
+.gameWrapper {
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 8%;
+}
+.progressBar {
+    list-style-type: none;
+    padding: 0;
+    width: 20%;
+    text-align: center;
+}
+.progressBar li {
+    margin: 10px;
+}
+.progressBar li button {
+    background-color: $defaultColor;
+    color: $white1;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    font-weight: bold;
+}
+.activeLevel button {
+    color: $white1 !important;
+    background-color: $green1 !important;
+}
+.gameDiv {
+    width: 80%;
+    height: auto;
+
+}
+.questionHeadline {
+    font-weight: normal;
+}
+.questionImg {
+    width: 30%;
+
+}
+.gameQuestionContent{
+    width: 60%;
+    margin-right: 10%;
+}
+
+
+/*********************************************/
+
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+
+
+
