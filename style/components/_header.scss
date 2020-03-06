@@ -1,6 +1,11 @@
 .headerDiv {
+    position: relative;
     padding: 2% 15% 2% 15%;
     margin-bottom: 8%;
+}
+.swiper-slide {
+  padding: 2em;
+  border: 1px solid #ccc;
 }
 .headerContent {
     width: 40%;

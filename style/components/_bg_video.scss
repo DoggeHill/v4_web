@@ -1,0 +1,15 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: .15;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    &__content{
+        object-fit: cover;
+    }
+    
+}
