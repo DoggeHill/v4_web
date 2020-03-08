@@ -67,6 +67,8 @@
 </div>
 <!-- --------------------- NEWEST BLOG POSTS ----------------------------------->
 
+
+
 <div class="blogPostsDiv ">
     <h1 class="headline">Newest blog posts</h1>
     <div class="blogTagsList">
@@ -77,7 +79,49 @@
         <a class="tag activeTag" href="#">Health</a>
         <a class="tag activeTag" href="#">Health</a>
     </div>
-    <div class="displayFlex">
+
+        <div class="card-carousel">
+            <?php
+            $the_query = new WP_Query(array(
+                // 'category_name' => 'news',
+                'posts_per_page' => 3,
+            ));
+            ?>
+            <?php if ($the_query->have_posts()) : ?>
+                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                    <div class="blogPost my-card">
+
+                        <?php if (has_post_thumbnail()) : ?>
+                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="blogImg ">
+                                <?php the_post_thumbnail(); ?>
+                            </a>
+                        <?php else : ?>
+                            <img class="blogImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+                        <?php endif; ?>
+
+                        <a href="<?php the_permalink(); ?>">
+                            <h3 class="blogHeadline"> <?php the_title(); ?></h3>
+                        </a>
+                        <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
+                        <p>
+                            <?php the_excerpt(); ?>
+                        </p>
+                        <br />
+                        <div class="blogTagsList">
+                            <a class="tag activeTag" href="#">Health</a>
+                            <a class="tag activeTag" href="#">Health</a>
+                        </div>
+                    </div>
+
+
+                <?php endwhile; ?>
+
+                <?php wp_reset_postdata(); ?>
+            <?php else : ?>
+                <p><?php echo ('No News'); ?></p>
+            <?php endif; ?>
+
+        </div>
         <!--  
             1. wp loop
             2. limitation for first 3 posts
@@ -85,47 +129,8 @@
             4. date
             5. tag/cat
          -->
-        <?php
-        $the_query = new WP_Query(array(
-            // 'category_name' => 'news',
-            'posts_per_page' => 3,
-        ));
-        ?>
-        <?php if ($the_query->have_posts()) : ?>
-            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <div class="blogPost swiper-slide">
 
-                    <?php if (has_post_thumbnail()) : ?>
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="blogImg ">
-                            <?php the_post_thumbnail(); ?>
-                        </a>
-                    <?php else : ?>
-                        <img class="blogImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
-                    <?php endif; ?>
-
-                    <a href="<?php the_permalink(); ?>">
-                        <h3 class="blogHeadline"> <?php the_title(); ?></h3>
-                    </a>
-                    <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
-                    <p>
-                        <?php the_excerpt(); ?>
-                    </p>
-                    <br />
-                    <div class="blogTagsList">
-                        <a class="tag activeTag" href="#">Health</a>
-                        <a class="tag activeTag" href="#">Health</a>
-                    </div>
-                </div>
-
-
-            <?php endwhile; ?>
-
-            <?php wp_reset_postdata(); ?>
-        <?php else : ?>
-            <p><?php echo ('No News'); ?></p>
-        <?php endif; ?>
     </div>
-</div>
 
 <!--
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
@@ -335,5 +340,49 @@
         </div>
     </div>
 </div>
+
+<script>$num = $('.my-card').length;
+    $even = $num / 2;
+    $odd = ($num + 1) / 2;
+
+    if ($num % 2 == 0) {
+        $('.my-card:nth-child(' + $even + ')').addClass('active');
+        $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+        $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+    } else {
+        $('.my-card:nth-child(' + $odd + ')').addClass('active');
+        $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+        $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+    }
+
+    $('.my-card').click(function() {
+        $slide = $('.active').width();
+        console.log($('.active').position().left);
+
+        if ($(this).hasClass('next')) {
+            $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+        } else if ($(this).hasClass('prev')) {
+            $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+        }
+
+        $(this).removeClass('prev next');
+        $(this).siblings().removeClass('prev active next');
+
+        $(this).addClass('active');
+        $(this).prev().addClass('prev');
+        $(this).next().addClass('next');
+    });
+
+
+    // Keyboard nav
+    $('html body').keydown(function(e) {
+        if (e.keyCode == 37) { // left
+            $('.active').prev().trigger('click');
+        }
+        else if (e.keyCode == 39) { // right
+            $('.active').next().trigger('click');
+        }
+    });
+</script>
 
 <?php get_footer(); ?>

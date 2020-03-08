@@ -32,6 +32,7 @@
          // And if we need scrollbar
      })
  </script>
+ <script src="js/slider.js"></script>
  </body>
 
  </html>
