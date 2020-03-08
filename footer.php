@@ -8,9 +8,30 @@
          ipsum dolor sit amet, consectetuer adipiscing elit.
      </p>
  </footer>
-
+ <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/navigation.js"></script>
+ <script>
+     var mySwiper = new Swiper ('.swiper-container', {
+         // Optional parameters
+         direction: 'horizontal',
+         loop: true,
+         speed: 1200,
+         setWrapperSize: false,
+         autoplay: {
+             delay: 5000,
+         },
 
+         // If we need pagination
+
+         // Navigation arrows
+         navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev',
+         },
+
+         // And if we need scrollbar
+     })
+ </script>
  </body>
 
  </html>

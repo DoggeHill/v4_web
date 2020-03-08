@@ -14,19 +14,60 @@
             <li><a target="_blank" href="#"><i class="fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
             <li><a target="_blank" href="#"><i class="fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
         </ul>
-        <div class="headerContent">
-            <h1 class="headline">Your ecological <br /> approach</h1>
-            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
-                . Donec id nisl. Aliquam erat volutpat. Integer fring
-                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
-                libero, ac hendrerit urna ante id
-            </p>
-            <button class="button">Button</button>
+        <div class="headerContentDiv">
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="headerContent">
+                            <h1 class="headline">Your ecological <br /> approach</h1>
+                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
+                                . Donec id nisl. Aliquam erat volutpat. Integer fring
+                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
+                                libero, ac hendrerit urna ante id
+                            </p>
+                            <button class="animated button">Button</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="headerContent">
+                            <h1 class="headline">Your Second ecological <br /> approach</h1>
+                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
+                                . Donec id nisl. Aliquam erat volutpat. Integer fring
+                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
+                                libero, ac hendrerit urna ante id
+                            </p>
+                            <button class="animated button">Button</button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="headerContent">
+                            <h1 class="headline">Your Third ecological <br /> approach</h1>
+                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
+                                . Donec id nisl. Aliquam erat volutpat. Integer fring
+                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
+                                libero, ac hendrerit urna ante id
+                            </p>
+                            <button class="animated button">Button</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+            </div>
+
         </div>
     </div>
 </div>
 <!-- --------------------- NEWEST BLOG POSTS ----------------------------------->
-<div class="blogPostsDiv swiper-container">
+
+<div class="blogPostsDiv ">
     <h1 class="headline">Newest blog posts</h1>
     <div class="blogTagsList">
         <a class="tag" href="#">Health</a>
@@ -36,7 +77,7 @@
         <a class="tag activeTag" href="#">Health</a>
         <a class="tag activeTag" href="#">Health</a>
     </div>
-    <div class="displayFlex swiper-wrapper">
+    <div class="displayFlex">
         <!--  
             1. wp loop
             2. limitation for first 3 posts
@@ -86,9 +127,11 @@
     </div>
 </div>
 
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<!--
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
 
 <!-- Initialize Swiper -->
+<!--
 <script>
     var delayInMilliseconds = 1000; //1 second
 
@@ -107,7 +150,90 @@
         });
     }, delayInMilliseconds);
 </script>
+-->
 
+<!------------------------------- IMAGE GRID -------------------------------->
+
+<div class="imageGridDiv">
+    <div class="displayFlex">
+        <div class="imageGridRow">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imageGridRow">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imageGridRow">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -171,7 +297,7 @@
                 <br />
                 <form action="" method="post" class="newsletterForm">
                     <input class="newsletterInput" type="text" name="email" placeholder="e-mail address" />
-                    <input type="submit" value="Subscribe" class="button">
+                    <input type="submit" value="Subscribe" class="button animated">
                 </form>
             </div>
             <img class="newsletterImg" alt="newsletterImg" src="https://colloquiumsk.com/wp-content/uploads/2019/03/Logo_SK.svg" />
@@ -187,7 +313,7 @@
             <input class="formContent" type="text" name="subject" placeholder="Subject" />
             <input class="formContent" type="text" name="email" placeholder="e-mail address" />
             <textarea class="formContent" name="message" placeholder="Message"></textarea>
-            <input type="submit" value="Send" class="button">
+            <input type="submit" value="Send" class="button animated">
         </form>
         <ul class="iconsList">
             <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
@@ -209,4 +335,5 @@
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>

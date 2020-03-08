@@ -40,6 +40,16 @@ a:hover {
         display: block !important;
     }
 }
+*::selection {
+    background-color: $green1;
+    color: $white1;
+}
+*::-moz-selection {
+    background-color: $green1;
+    color: $white1;
+}
+
+
 
 
 

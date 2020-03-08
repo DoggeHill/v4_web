@@ -5,14 +5,30 @@
 }
 .swiper-slide {
   padding: 2em;
-  border: 1px solid #ccc;
+    margin: 0!important;
+}
+.swiper-container {
+    height: inherit;
 }
 .headerContent {
-    width: 40%;
-    margin-left: 10%;
+    width: 100%;
     position: relative;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
     @media all and (max-width: $break-1){
-        width: 80%;
+        width: 100%;
+    }
+}
+.headerContentDiv {
+    position: absolute;
+    margin-left: 10%;
+    height: 100%;
+    width: 90%;
+    @media all and (max-width: $break-1){
+        position: relative;
+        width: 100%;
+        margin-left: 0;
     }
 }
 .headerContent .button {

@@ -98,6 +98,7 @@
                         <br/>
                         <form action="" method="post">
                             <input type="text" class="formContent" placeholder="input"/><br/>
+                            <input class="answer" type="button" placeholder="Upload Image" value="Upload Image" onclick="getMedia()">
                             <input class="button" data-index="2" value="Some Value" type="submit" onclick="window.changeLevel(this.dataset.index); return false"/>
                         </form>
                     </div>
@@ -106,6 +107,7 @@
                     <p>second</p>
                     <form>
                         <input type="text" class="answer"/>
+
                         <input data-index="3" type="submit" onclick="changeLevel(this.dataset.index); return false"/>
                     </form>
                 </div>
@@ -223,6 +225,7 @@
 
 <script src="js/navigation.js"></script>
 <script src="js/game.js"></script>
+<script src="js/getMedia.js"></script>
 
 </body>
 </html>
