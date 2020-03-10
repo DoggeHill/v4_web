@@ -35,6 +35,8 @@
 <body>
 
     <!-- ---------------------- NAVIGATION ________________________________________-->
+    <div class="video-wrapper">
+
     <div class="navigation">
         <nav class="navbar">
             <div class="container-fluid">

@@ -1,12 +1,7 @@
 <?php get_header() ?>
 <!-------------------------------HEADER------------------------------->
 <div class="headerDiv">
-    <div class="bg-video">
-        <video class="bg-video__content" autoplay muted loop>
-            <source src="<?php echo get_bloginfo('template_directory'); ?>/images/cover_video.mp4" type="video/mp4">
-            <!-- TODO: I should ad support for .webm also and mesidž for not supported browsers -->
-        </video>
-    </div>
+
     <div class="displayFlex">
         <ul class="iconsList">
             <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
@@ -65,6 +60,15 @@
         </div>
     </div>
 </div>
+<div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop>
+        <source src="<?php echo get_bloginfo('template_directory'); ?>/images/cover_video.mp4" type="video/mp4">
+        <!-- TODO: I should ad support for .webm also and mesidž for not supported browsers -->
+    </video>
+</div>
+
+</div>
+
 <!-- --------------------- NEWEST BLOG POSTS ----------------------------------->
 
 
@@ -80,49 +84,49 @@
         <a class="tag activeTag" href="#">Health</a>
     </div>
 
-        <div class="card-carousel">
-            <?php
-            $the_query = new WP_Query(array(
-                // 'category_name' => 'news',
-                'posts_per_page' => 3,
-            ));
-            ?>
-            <?php if ($the_query->have_posts()) : ?>
-                <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <div class="blogPost my-card">
+    <div class="card-carousel">
+        <?php
+        $the_query = new WP_Query(array(
+            // 'category_name' => 'news',
+            'posts_per_page' => 3,
+        ));
+        ?>
+        <?php if ($the_query->have_posts()) : ?>
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <div class="blogPost my-card">
 
-                        <?php if (has_post_thumbnail()) : ?>
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="blogImg ">
-                                <?php the_post_thumbnail(); ?>
-                            </a>
-                        <?php else : ?>
-                            <img class="blogImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
-                        <?php endif; ?>
-
-                        <a href="<?php the_permalink(); ?>">
-                            <h3 class="blogHeadline"> <?php the_title(); ?></h3>
+                    <?php if (has_post_thumbnail()) : ?>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="blogImg ">
+                            <?php the_post_thumbnail(); ?>
                         </a>
-                        <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
-                        <p>
-                            <?php the_excerpt(); ?>
-                        </p>
-                        <br />
-                        <div class="blogTagsList">
-                            <a class="tag activeTag" href="#">Health</a>
-                            <a class="tag activeTag" href="#">Health</a>
-                        </div>
+                    <?php else : ?>
+                        <img class="blogImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+                    <?php endif; ?>
+
+                    <a href="<?php the_permalink(); ?>">
+                        <h3 class="blogHeadline"> <?php the_title(); ?></h3>
+                    </a>
+                    <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
+                    <p>
+                        <?php the_excerpt(); ?>
+                    </p>
+                    <br />
+                    <div class="blogTagsList">
+                        <a class="tag activeTag" href="#">Health</a>
+                        <a class="tag activeTag" href="#">Health</a>
                     </div>
+                </div>
 
 
-                <?php endwhile; ?>
+            <?php endwhile; ?>
 
-                <?php wp_reset_postdata(); ?>
-            <?php else : ?>
-                <p><?php echo ('No News'); ?></p>
-            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php else : ?>
+            <p><?php echo ('No News'); ?></p>
+        <?php endif; ?>
 
-        </div>
-        <!--  
+    </div>
+    <!--  
             1. wp loop
             2. limitation for first 3 posts
             3. author
@@ -130,7 +134,7 @@
             5. tag/cat
          -->
 
-    </div>
+</div>
 
 <!--
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
@@ -160,15 +164,16 @@
 <!------------------------------- IMAGE GRID -------------------------------->
 
 <div class="imageGridDiv">
-    <div class="displayFlex">
-        <div class="imageGridRow">
+    <div class="displayFlex customImageGridFlex">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -178,7 +183,9 @@
                         <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -188,19 +195,21 @@
                         <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="imageGridRow">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -210,19 +219,9 @@
                         <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="imageGridRow">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -232,11 +231,72 @@
                         <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
                     </div>
                     <div class="flip-card-back">
-                        <a href="#"><h1>John DoeImage Headline</h1></a>
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
+                    </div>
+                    <div class="flip-card-back">
+                        <a href="#">
+                            <h1>John DoeImage Headline</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -305,7 +365,9 @@
                     <input type="submit" value="Subscribe" class="button animated">
                 </form>
             </div>
-            <img class="newsletterImg" alt="newsletterImg" src="https://colloquiumsk.com/wp-content/uploads/2019/03/Logo_SK.svg" />
+            <div class="newsletterimg" data-setbg= "<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
+
+            </div>
         </div>
     </div>
 </div>
@@ -341,7 +403,8 @@
     </div>
 </div>
 
-<script>$num = $('.my-card').length;
+<script>
+    $num = $('.my-card').length;
     $even = $num / 2;
     $odd = ($num + 1) / 2;
 
@@ -360,9 +423,13 @@
         console.log($('.active').position().left);
 
         if ($(this).hasClass('next')) {
-            $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+            $('.card-carousel').stop(false, true).animate({
+                left: '-=' + $slide
+            });
         } else if ($(this).hasClass('prev')) {
-            $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+            $('.card-carousel').stop(false, true).animate({
+                left: '+=' + $slide
+            });
         }
 
         $(this).removeClass('prev next');
@@ -378,8 +445,7 @@
     $('html body').keydown(function(e) {
         if (e.keyCode == 37) { // left
             $('.active').prev().trigger('click');
-        }
-        else if (e.keyCode == 39) { // right
+        } else if (e.keyCode == 39) { // right
             $('.active').next().trigger('click');
         }
     });

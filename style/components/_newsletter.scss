@@ -1,6 +1,6 @@
 .newsletterDiv {
     width: 100%;
-    background-color: $green2;
+    background-color: $green1;
     color: $defaultColor;
     margin-bottom: 8%;
 }
@@ -8,6 +8,7 @@
     padding: 2% 15% 2% 15%;
 }
 .newsletterImg {
+    
     flex: 1;
     height: 200px;
     @media all and (max-width: $break-1){

@@ -1,8 +1,14 @@
+.customImageGridFlex{
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+
 .imageGridDiv {
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
     height: auto;
     margin-bottom: 8%;
+    background-color: $green1;
 }
 .imageGridRow {
     flex: 1;
@@ -15,9 +21,9 @@
 
 .flip-card {
     background-color: transparent;
-    width: 92%;
+    width: 15%;
     height: 400px;
-    margin: 8% 2%;
+    
     perspective: 1000px;
 }
 
