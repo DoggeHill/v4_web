@@ -135,21 +135,14 @@
          -->
 
 </div>
-
 <!--
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
-
 <!-- Initialize Swiper -->
 <!--
 <script>
     var delayInMilliseconds = 1000; //1 second
-
     setTimeout(function() {
         var swiper = new Swiper('.swiper-container', {
-
-
-
-
             slidesPerView: 1,
             spaceBetween: 30,
             pagination: {
@@ -160,143 +153,133 @@
     }, delayInMilliseconds);
 </script>
 -->
-
 <!------------------------------- IMAGE GRID -------------------------------->
+
+<?php echo na_get_gallery_image_urls(128); ?>
 
 <div class="imageGridDiv">
     <div class="displayFlex customImageGridFlex">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://www.mall.cz/i/38045749/450/450" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://silodrome.com/wp-content/uploads/2013/06/Dont-Panic-.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <img class="imageGridImg" src="https://ih1.redbubble.net/image.46052923.6069/flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="Avatar">
-                    </div>
-                    <div class="flip-card-back">
-                        <a href="#">
-                            <h1>John DoeImage Headline</h1>
-                        </a>
-                    </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                    <a href="#">
+                        <h1>John DoeImage Headline</h1>
+                    </a>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 
@@ -365,7 +348,7 @@
                     <input type="submit" value="Subscribe" class="button animated">
                 </form>
             </div>
-            <div class="newsletterimg" data-setbg= "<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
+            <div class="newsletterimg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
 
             </div>
         </div>
