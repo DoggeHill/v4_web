@@ -158,6 +158,7 @@
 <?php echo na_get_gallery_image_urls(128); ?>
 
 <div class="imageGridDiv">
+    <h1 class="headline">Newest blog posts</h1>
     <div class="displayFlex customImageGridFlex">
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -165,7 +166,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -176,7 +177,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -187,7 +188,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -198,7 +199,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -209,7 +210,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -220,7 +221,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -231,7 +232,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -242,7 +243,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -253,7 +254,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -264,7 +265,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -275,7 +276,7 @@
                 </div>
                 <div class="flip-card-back">
                     <a href="#">
-                        <h1>John DoeImage Headline</h1>
+                        <h3>John DoeImage Headline</h3>
                     </a>
                 </div>
             </div>
@@ -348,7 +349,7 @@
                     <input type="submit" value="Subscribe" class="button animated">
                 </form>
             </div>
-            <div class="newsletterimg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
+            <div class="newsletterImg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
 
             </div>
         </div>

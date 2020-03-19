@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8b57bf7-42e0-4347-86bb-b7d11b7db067" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/comments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/components/_slider.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/_imageGrid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_imageGrid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/_newsletter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_newsletter.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +102,7 @@
       <workItem from="1583670318034" duration="2043000" />
       <workItem from="1583683410369" duration="3163000" />
       <workItem from="1583686607575" duration="9153000" />
+      <workItem from="1584641263240" duration="3441000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1582794096629</created>
