@@ -4,5 +4,56 @@ footer {
     background-color: $green1;
     color: $white1;
     text-align: left;
-    padding: 5% 25% 5% 25%;
+    padding: 5% 15% 5% 15%;
+}
+footer .headline {
+    color: $white1;
+    margin-top: 0;
+}
+.footerContent {
+    margin-bottom: 5%;
+}
+.footerElement {
+}
+.footerAbout {
+    flex: 3;
+    width: auto;
+}
+.footerIconsList {
+    flex: 2;
+    padding-left: 5%;
+}
+.footerIconsList .icon {
+    color: $white1;
+}
+.footerMenu {
+    flex: 2;
+    padding-left: 5%;
+}
+.footerMenu ul {
+    list-style-type: none;
+    text-align: left;
+    padding-left: 15px;
+}
+.footerMenu ul li a{
+    color: $white1;
+}
+.footerMenu ul li a:hover{
+    color: $green2;
+}
+.footerCategories {
+    flex: 2;
+}
+.footerCategories {
+    padding-left: 15px;
+    text-align: left;
+}
+.footerCategories ul li a{
+    color: $white1;
+}
+.footerCategories ul li a:hover{
+    color: $green2;
+}
+.footerRights {
+    text-align: center;
 }

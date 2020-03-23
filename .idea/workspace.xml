@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c8b57bf7-42e0-4347-86bb-b7d11b7db067" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/_imageGrid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_imageGrid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/components/_newsletter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/components/_newsletter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/layout/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/layout/_navigation.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +108,7 @@
       <workItem from="1583683410369" duration="3163000" />
       <workItem from="1583686607575" duration="9153000" />
       <workItem from="1584641263240" duration="3638000" />
+      <workItem from="1584950804625" duration="10595000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1582794096629</created>
@@ -239,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584647282879</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="i am working">
+      <created>1584950857952</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1584950857953</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,18 +285,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="160" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1582796251988" />
-    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1584647280337">
+    <state x="415" y="0" key="CommitChangelistDialog2" timestamp="1584950857042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584647280337" />
+    <state x="415" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584950857042" />
     <state x="285" y="55" key="SettingsEditor" timestamp="1582794017053">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="285" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582794017053" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1584647285829">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1584950860507">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584647285829" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584950860507" />
     <state x="592" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583611130204">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -1,11 +1,43 @@
  <footer>
-     <p>
-         Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius
-         sit amet, mi. Donec id nisl. Aliquam erat volutpat. Integer fringilla. Duis lobortis,
-         quam non volutpat suscipit, magna sem consequat libero, ac hendrerit urna ante id mi. Qu
-         isque commodo facilisis tellus. Integer sodales lorem sed nisl. Morbi consectetuer ma
-         uris quis odio. Ut dolor lorem, viverra vitae, viverra eu, euismod nec, enim. Lorem
-         ipsum dolor sit amet, consectetuer adipiscing elit.
+     <div class="displayFlex footerContent">
+         <div class="footerAbout footerElement">
+             <h2 class="headline">About project:</h2>
+             <p>
+                 Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius
+                 sit amet, mi. Donec id nisl. Aliquam erat volutpat. Integer fringilla. Duis lobortis,
+                 quam non iverra eu, euismod nec, enim. Lorem
+                 ipsum dolor sit amet, consectetuer adipiscing elit.
+             </p>
+         </div>
+         <ul class="iconsList footerIconsList footerElement">
+             <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="fa fa-instagram icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
+         </ul>
+         <div class="footerMenu footerElement">
+             <h2 class="headline">Menu:</h2>
+            <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+            </ul>
+         </div>
+         <div class="footerCategories footerElement">
+             <h2 class="headline">Categories:</h2>
+             <ul>
+                 <li><a href="#">category</a></li>
+                 <li><a href="#">category</a></li>
+                 <li><a href="#">category</a></li>
+                 <li><a href="#">category</a></li>
+                 <li><a href="#">category</a></li>
+             </ul>
+         </div>
+     </div>
+     <p class="footerRights">
+         Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius.
      </p>
  </footer>
  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>

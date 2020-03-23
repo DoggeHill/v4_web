@@ -158,7 +158,6 @@
 <?php echo na_get_gallery_image_urls(128); ?>
 
 <div class="imageGridDiv">
-    <h1 class="headline">Newest blog posts</h1>
     <div class="displayFlex customImageGridFlex">
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -295,16 +294,12 @@
         <div class="aboutUsLeft aboutUsText">
             <h3 class="headline">Tuna pojde dajaký textík určite niečo dlhšie</h3>
             <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius sit amet, mi. Donec id nisl. Aliquam erat
-                volutpat. Integer fringilla. Duis lobortis, quam non volutpat suscipit,
-                magna sem consequat libero, ac hendrerit urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
+                vehicula ac, varius na ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
                 Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p><br />
             <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius sit amet, mi. Donec id nisl. Aliquam erat
-                volutpat. Integer fringilla. Duis lobortis, quam non volutpat suscipit,
-                magna sem consequat libero, ac hendrerit urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
+                vehicula ac, varius sit a ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
                 Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p>
@@ -315,17 +310,13 @@
         <div class="aboutUsRightText aboutUsText">
             <h3 class="headline">Tuna pojde dajaký textík určite niečo dlhšie</h3>
             <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius sit amet, mi. Donec id nisl. Aliquam erat
-                volutpat. Integer fringilla. Duis lobortis, quam non volutpat suscipit,
-                magna sem consequat libero, ac hendrerit urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
+                vehicula ac, variut urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
                 Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p><br />
             <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
                 vehicula ac, varius sit amet, mi. Donec id nisl. Aliquam erat
-                volutpat. Integer fringilla. Duis lobortis, quam non volutpat suscipit,
-                magna sem consequat libero, ac hendrerit urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
-                Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
+                volutpat. Integer fringillviverra v
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p>
         </div>
@@ -336,21 +327,25 @@
 <div class="newsletterDiv">
     <div class="newsletter">
         <div class="displayFlex">
-            <div class="newsletterContent">
-                <h1 class="headline">Newsletter</h1>
-                <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi. Don
-                    ec id nisl. Aliquam erat volut
-                    pat. Integer fringilla. Duis lobortis, quam non volutpat suscipit, mag
-                    na sem consequat libero, ac hendrerit urna ante
-                </p>
-                <br />
-                <form action="" method="post" class="newsletterForm">
-                    <input class="newsletterInput" type="text" name="email" placeholder="e-mail address" />
-                    <input type="submit" value="Subscribe" class="button animated">
-                </form>
+            <div class="newsletterWrapper newsletterImg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
+                <div class="newsletterContent">
+                    <h1 class="headline">Newsletter</h1>
+                    <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi. Don
+                        ec id nisl. Aliquam erat volut
+                        pat. Integer fringilla. Duis lobortis, quam non volutpat suscipit, mag
+                        na sem consequat libero, ac hendrerit urna ante
+                    </p>
+                </div>
             </div>
-            <div class="newsletterImg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
+            <div class="newsletterWrapper">
+                <div class="newsletterContent">
 
+                    <form action="" method="post" class="newsletterForm">
+                        <input class="newsletterInput" type="text" name="name" placeholder="Name" />
+                        <input class="newsletterInput" type="text" name="email" placeholder="e-mail address" />
+                        <input type="submit" value="Subscribe" class="button animated">
+                    </form>
+                </div>
             </div>
         </div>
     </div>

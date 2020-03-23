@@ -10,7 +10,7 @@
     height: auto;
     margin-bottom: 8%;
     background-color: $green1;
-    padding: 2% 15% 5% 15%;
+    //padding: 2% 15% 5% 15%;
 }
 .imageGridDiv .headline {
     color: $white1;
@@ -27,15 +27,15 @@
 .flip-card {
     background-color: transparent;
     width: 20%;
-    height: 300px;
+    height: 340px;
     perspective: 1000px;
     @media all and (max-width: $break-2){
         width: 33.333%;
-        height: 250px;
+        height: 300px;
     }
     @media all and (max-width: $break-1){
         width: 50%;
-        height: 200px;
+        height: 250px;
     }
 }
 
@@ -77,6 +77,9 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
 }
 .flip-card-back a h3 {
     color: $green1;

@@ -4,19 +4,34 @@
     color: $defaultColor;
     margin-bottom: 8%;
 }
-.newsletter {
-    padding: 2% 15% 2% 15%;
-}
-.newsletterImg {
-    
-    flex: 1;
-    height: 200px;
+.newsletterWrapper {
+    width: 50%;
+    position: relative;
+    background-color: $green2;
+    height: 350px;
     @media all and (max-width: $break-1){
-        display: none;
+        width: 100%;
     }
 }
+.newsletterImg {
+    height: auto;
+    color: white;
+    @media all and (max-width: $break-1){
+        height: 350px;
+    }
+    background-image: url("https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.newsletterImg .headline {
+    color: white;
+}
 .newsletterContent {
-    flex: 1;
+    padding: 2% 15% 2% 15%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .newsletterInput {
     width: 100%;

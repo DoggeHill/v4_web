@@ -67,7 +67,7 @@
                         <?php wp_nav_menu($defaults); ?>
                             <!-- tu nemôže byť li toto musí byť niečo iné
                         !  -->
-                            <li class="screenDisplay navProfile">
+                            <div class="screenDisplay navProfile">
                                 <div class="displayFlex">
                                     <a href="#"><img class="navProfileImg" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" /></a>
                                     <div class="navProfileText">
@@ -75,7 +75,8 @@
                                         <a class="logOut" href="#">Log out</a>
                                     </div>
                                 </div>
-                            </li>
+                            </div>
+                    </ul>
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>
