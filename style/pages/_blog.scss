@@ -1,0 +1,36 @@
+.blogDiv {
+    display: flex;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 8%;
+    background-color: $green1;
+}
+.blogMain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    margin-right: 5%;
+    justify-content: space-between;
+    //align-content: space-evenly;
+}
+.blogMainPost {
+    width: 47.5%;
+    margin: 0 0 5% 0;
+    background: white;
+    //border-radius: 0 0 10px 0;
+
+
+}
+.blogRight {
+    width: 30%;
+}
+.blogMostRead {
+    background-color: red;
+    height: 200px;
+    margin-bottom: 10%;
+}
+.blogCategories {
+    background-color: blue;
+    height: 200px;
+}

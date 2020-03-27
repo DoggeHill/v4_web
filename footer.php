@@ -1,4 +1,11 @@
  <footer>
+     <div class="displayFlex footerLogosDiv">
+         <div class="footerLogo"></div>
+         <div class="footerLogo"></div>
+         <div class="footerLogo"></div>
+         <div class="footerLogo"></div>
+         <div class="footerLogo"></div>
+     </div>
      <div class="displayFlex footerContent">
          <div class="footerAbout footerElement">
              <h2 class="headline">About project:</h2>

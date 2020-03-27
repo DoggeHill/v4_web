@@ -4,11 +4,15 @@
   padding-top: 1%;
   margin-bottom: 5%;
   border-bottom-style: solid;
-  border-bottom-color: $green2;
+  border-bottom-color: $green1;
+  color: $defaultColor;
   @media all and (max-width: 992px) {
     width: 100%;
     margin-left: 0;
   }
+}
+.navigation a {
+  color:$defaultColor;
 }
 .menu ul li {
   width: 100%;
@@ -148,7 +152,7 @@
   width: 100%;
   margin: 0 !important;
   border-bottom-style: solid;
-  border-bottom-color: $green2;
+  border-bottom-color: $green1;
   @media all and (max-width: 992px) {
     display: block;
     width: 100%;

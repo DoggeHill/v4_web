@@ -19,3 +19,16 @@ function na_get_gallery_image_urls( $post_id ) {
         }
     }
  }
+
+if ( is_home() || is_front_page() ) {
+
+}
+
+function addcssAndScripts()
+{
+    if ( is_home() || is_front_page() ) {
+        wp_enqueue_style("HomepageCss",  get_template_directory_uri() . "/customCss/frontPage.css " );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'addcssAndScripts');
+

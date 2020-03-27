@@ -269,17 +269,6 @@
                 </div>
             </div>
         </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
