@@ -4,7 +4,9 @@
     padding-left: 15%;
     padding-right: 15%;
     margin-bottom: 8%;
-    background-color: $green1;
+    @media all and (max-width: $break-1){
+        display: block;
+    }
 }
 .blogMain {
     display: flex;
@@ -12,25 +14,92 @@
     width: 65%;
     margin-right: 5%;
     justify-content: space-between;
+    @media all and (max-width: $break-1){
+        display: block;
+        width: 100%;
+    }
     //align-content: space-evenly;
 }
 .blogMainPost {
     width: 47.5%;
     margin: 0 0 5% 0;
-    background: white;
     //border-radius: 0 0 10px 0;
+    @media all and (max-width: $break-1){
+        width: 100%;
+        margin-bottom: 100px !important;
+    }
 
 
 }
 .blogRight {
     width: 30%;
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
 }
 .blogMostRead {
     background-color: red;
     height: 200px;
     margin-bottom: 10%;
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
 }
 .blogCategories {
     background-color: blue;
     height: 200px;
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
+}
+
+.blogTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 5%;
+    @media all and (max-width: 992px) {
+        display: block;
+    }
+}
+.blogTop .blogSlider {
+    width: 65%;
+    height: 400px;
+    .swiper-button-prev {
+        color: $white1 !important;
+    }
+    .swiper-button-next {
+        color: $white1 !important;
+    }
+    @media all and (max-width: $break-1){
+       width: 100%;
+    }
+}
+.blogTop .blogTopPost {
+    width: 30%;
+    background-color: green;
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
+}
+.blogSlider .swiper-slide{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $white1 !important;
+}
+.blogSlider .blogHeadline {
+    color: $white1;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+}
+.blogSlider .blogHeadline:hover {
+    color: $green1;
 }

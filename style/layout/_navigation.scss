@@ -11,6 +11,12 @@
     margin-left: 0;
   }
 }
+.navbar-collapse.collapse {
+  display: flex !important;
+  @media all and (max-width: $break-1){
+    display: block !important;
+  }
+}
 .navigation a {
   color:$defaultColor;
 }
@@ -242,7 +248,4 @@
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-}
-.navbar-collapse.collapse {
-  display: flex !important;
 }

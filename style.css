@@ -668,7 +668,11 @@ a:hover {
   padding-left: 15%;
   padding-right: 15%;
   margin-bottom: 8%;
-  background-color: #41AE65;
+}
+@media all and (max-width: 768px) {
+  .blogDiv {
+    display: block;
+  }
 }
 
 .blogMain {
@@ -678,15 +682,31 @@ a:hover {
   margin-right: 5%;
   justify-content: space-between;
 }
+@media all and (max-width: 768px) {
+  .blogMain {
+    display: block;
+    width: 100%;
+  }
+}
 
 .blogMainPost {
   width: 47.5%;
   margin: 0 0 5% 0;
-  background: white;
+}
+@media all and (max-width: 768px) {
+  .blogMainPost {
+    width: 100%;
+    margin-bottom: 100px !important;
+  }
 }
 
 .blogRight {
   width: 30%;
+}
+@media all and (max-width: 768px) {
+  .blogRight {
+    width: 100%;
+  }
 }
 
 .blogMostRead {
@@ -694,10 +714,82 @@ a:hover {
   height: 200px;
   margin-bottom: 10%;
 }
+@media all and (max-width: 768px) {
+  .blogMostRead {
+    width: 100%;
+  }
+}
 
 .blogCategories {
   background-color: blue;
   height: 200px;
+}
+@media all and (max-width: 768px) {
+  .blogCategories {
+    width: 100%;
+  }
+}
+
+.blogTop {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-bottom: 5%;
+}
+@media all and (max-width: 992px) {
+  .blogTop {
+    display: block;
+  }
+}
+
+.blogTop .blogSlider {
+  width: 65%;
+  height: 400px;
+}
+.blogTop .blogSlider .swiper-button-prev {
+  color: White !important;
+}
+.blogTop .blogSlider .swiper-button-next {
+  color: White !important;
+}
+@media all and (max-width: 768px) {
+  .blogTop .blogSlider {
+    width: 100%;
+  }
+}
+
+.blogTop .blogTopPost {
+  width: 30%;
+  background-color: green;
+}
+@media all and (max-width: 768px) {
+  .blogTop .blogTopPost {
+    width: 100%;
+  }
+}
+
+.blogSlider .swiper-slide {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: White !important;
+}
+
+.blogSlider .blogHeadline {
+  color: White;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+}
+
+.blogSlider .blogHeadline:hover {
+  color: #41AE65;
 }
 
 .headerDiv {
@@ -842,6 +934,11 @@ footer .headline {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media all and (max-width: 768px) {
+  .footerLogo {
+    width: 100%;
+  }
+}
 
 .navigation {
   width: 70%;
@@ -856,6 +953,15 @@ footer .headline {
   .navigation {
     width: 100%;
     margin-left: 0;
+  }
+}
+
+.navbar-collapse.collapse {
+  display: flex !important;
+}
+@media all and (max-width: 768px) {
+  .navbar-collapse.collapse {
+    display: block !important;
   }
 }
 
@@ -1136,10 +1242,6 @@ footer .headline {
     box-shadow: none;
   }
 }
-.navbar-collapse.collapse {
-  display: flex !important;
-}
-
 .aboutUsDiv {
   padding: 2% 15% 2% 15%;
   margin-bottom: 8%;
