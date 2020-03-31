@@ -710,8 +710,7 @@ a:hover {
 }
 
 .blogMostRead {
-  background-color: red;
-  height: 200px;
+  height: auto;
   margin-bottom: 10%;
 }
 @media all and (max-width: 768px) {
@@ -762,12 +761,23 @@ a:hover {
 
 .blogTop .blogTopPost {
   width: 30%;
-  background-color: green;
+  position: relative;
+  background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media all and (max-width: 768px) {
   .blogTop .blogTopPost {
     width: 100%;
   }
+}
+
+.blogTopPost .blogHeadline {
+  color: White;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
 }
 
 .blogSlider .swiper-slide {
@@ -790,6 +800,34 @@ a:hover {
 
 .blogSlider .blogHeadline:hover {
   color: #41AE65;
+}
+
+.blogMostReadPost {
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.blogMostReadPost .blogHeadline {
+  width: 60%;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.blogMostReadPost .blogHeadline a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blogMostReadPost .blogImage {
+  float: right;
+  width: 40%;
+  height: auto;
+}
+
+.blogMostReadHeadline {
+  font-weight: bold;
+  margin-top: 0;
 }
 
 .headerDiv {
