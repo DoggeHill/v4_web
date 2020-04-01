@@ -39,18 +39,22 @@
 }
 .blogMostRead {
     height: auto;
-    margin-bottom: 10%;
+    margin-bottom: 20%;
     @media all and (max-width: $break-1){
         width: 100%;
     }
 }
 .blogCategories {
-    background-color: blue;
     height: 200px;
     @media all and (max-width: $break-1){
         width: 100%;
     }
 }
+.blogCategories .blogCategoriesHeadline {
+    font-weight: bold;
+    margin-top: 0;
+}
+
 
 .blogTop {
     display: flex;

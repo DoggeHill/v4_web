@@ -138,7 +138,15 @@
                 </div>
             </div>
             <div class="blogCategories">
-
+                <h2 class="blogCategoriesHeadline">Categories:</h2>
+                <br/>
+                <ul>
+                    <li><a href="#">category</a></li>
+                    <li><a href="#">category</a></li>
+                    <li><a href="#">category</a></li>
+                    <li><a href="#">category</a></li>
+                    <li><a href="#">category</a></li>
+                </ul>
             </div>
         </div>
     </div>
