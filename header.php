@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
     </script>
-    <?php wp_head(); ?>
+    <?php //wp_head(); ?>
 </head>
 <body>
     <!-- ---------------------- NAVIGATION ________________________________________-->
@@ -34,7 +34,7 @@
                         </button>
                         <div class=" navProfile">
                             <div class="displayFlex">
-                                <a href="#"><img class="navProfileImg" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" /></a>
+                                <a href="#"><img class="navProfileImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" /></a>
                                 <div class="navProfileText">
                                     <a href="#">Samuel Slavik </a><br />
                                     <a class="logOut" href="#">Log out</a>
@@ -45,39 +45,39 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse">
                        <?php
-                        $defaults = array(
-                        'menu' => '',
-                        'container' => 'ul',
-                        'container_class' => 'menu',
-                        'container_id' => '',
-                        'menu_class' => 'nav navbar-nav',
-                        'menu_id' => '',
-                        'echo' => true,
-                        'fallback_cb' => 'wp_page_menu',
-                        'before' => '',
-                        'after' => '',
-                        'link_before' => '',
-                        'link_after' => '',
-                        'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
-                        'item_spacing' => 'preserve',
-                        'depth' => 0,
-                        'walker' => '',
-                        'theme_location' => 'menu',
-                        );
-                        ?>
-                        <?php wp_nav_menu($defaults); ?>
+$defaults = array(
+    'menu' => '',
+    'container' => 'ul',
+    'container_class' => 'menu',
+    'container_id' => '',
+    'menu_class' => 'nav navbar-nav',
+    'menu_id' => '',
+    'echo' => true,
+    'fallback_cb' => 'wp_page_menu',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'items_wrap' => '<ul id="%1$s" class="nav navbar-nav">%3$s</ul>',
+    'item_spacing' => 'preserve',
+    'depth' => 0,
+    'walker' => '',
+    'theme_location' => 'menu',
+);
+?>
+                        <?php wp_nav_menu($defaults);?>
                             <!-- tu nemôže byť li toto musí byť niečo iné
                         !  -->
                             <div class="screenDisplay navProfile">
                                 <div class="displayFlex">
-                                    <a href="#"><img class="navProfileImg" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" /></a>
+                                    <a href="#"><img class="navProfileImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" /></a>
                                     <div class="navProfileText">
                                         <a href="#">Samuel Slavik </a><br />
                                         <a class="logOut" href="#">Log out</a>
                                     </div>
                                 </div>
                             </div>
-                    </ul>
+
                     </div>
                     <!-- /.navbar-collapse -->
                 </div>

@@ -1,7 +1,31 @@
 .headline {
-    color: $defaultColor;
+    font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+  transition: all, 0.2s;
+  -webkit-transition: all, 0.2s;
+  -moz-transition: all, 0.2s;
+  -ms-transition: all, 0.2s;
+  -o-transition: all, 0.2s;
     padding: 2% 0% 2% 0%;
     font-weight: bold;
+
+&:hover {
+    transform: skewY(0.5deg) skewX(1.5deg) scale(1.01);
+    -webkit-transform: skewY(0.5deg) skewX(1.5deg) scale(1.01);
+    -moz-transform: skewY(0.5deg) skewX(1.5deg) scale(1.01);
+    -ms-transform: skewY(0.5deg) skewX(1.5deg) scale(1.01);
+    -o-transform: skewY(0.5deg) skewX(1.5deg) scale(1.01);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, 2);
+}
 }
 .blogHeadline {
     font-weight: bold;

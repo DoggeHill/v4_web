@@ -3,9 +3,6 @@
   margin-left: 15%;
   padding-top: 1%;
   margin-bottom: 5%;
-  border-bottom-style: solid;
-  border-bottom-color: $green1;
-  color: $defaultColor;
   @media all and (max-width: 992px) {
     width: 100%;
     margin-left: 0;
@@ -18,7 +15,7 @@
   }
 }
 .navigation a {
-  color:$defaultColor;
+  color:$white1;
 }
 .menu ul li {
   width: 100%;
@@ -34,6 +31,14 @@
 .nav li {
   width: 100%;
   text-align: center;
+} 
+.nav li a:hover{
+  border-bottom: 2px solid $green1;
+  background-color: transparent;
+
+
+
+
 }
 .nav {
   display: flex;
@@ -41,6 +46,7 @@
   @media all and (max-width: 992px) {
     display: block;
   }
+
 }
 .navbar {
   margin-bottom: 0;

@@ -6,6 +6,20 @@
 }
 .headerDiv .headline {
     color: white;
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+}
+.headerDiv .headline-text {
+    max-width: 80%;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .swiper-slide {
   padding: 2em;
@@ -15,6 +29,7 @@
     height: inherit;
 }
 .headerContent {
+    height: auto;
     width: 100%;
     position: relative;
     padding-left: 5%;
@@ -27,7 +42,6 @@
 .headerContentDiv {
     position: absolute;
     margin-left: 10%;
-    height: 100%;
     width: 90%;
     @media all and (max-width: $break-1){
         position: relative;

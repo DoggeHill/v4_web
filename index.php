@@ -1,7 +1,6 @@
-<?php get_header() ?>
+<?php get_header()?>
 <!-------------------------------HEADER------------------------------->
 <div class="headerDiv">
-
     <div class="displayFlex">
         <ul class="iconsList">
             <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
@@ -16,47 +15,22 @@
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="headerContent">
-                            <h1 class="headline">Your ecological <br /> approach</h1>
-                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
-                                . Donec id nisl. Aliquam erat volutpat. Integer fring
-                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
-                                libero, ac hendrerit urna ante id
+                            <h1 class="headline text-center">This is your ecological approach</h1>
+                            <p class="headline-text text-center">Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
+                                . Donec id nisl. Aliquam erat volutpat. Integer fring [...]
                             </p>
-                            <button class="animated button">Button</button>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="headerContent">
-                            <h1 class="headline">Your Second ecological <br /> approach</h1>
-                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
-                                . Donec id nisl. Aliquam erat volutpat. Integer fring
-                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
-                                libero, ac hendrerit urna ante id
-                            </p>
-                            <button class="animated button">Button</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="headerContent">
-                            <h1 class="headline">Your Third ecological <br /> approach</h1>
-                            <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
-                                . Donec id nisl. Aliquam erat volutpat. Integer fring
-                                illa. Duis lobortis, quam non volutpat suscipit, magna sem consequat
-                                libero, ac hendrerit urna ante id
-                            </p>
-                            <button class="animated button">Button</button>
+                        <div class="header-button">
+                            <p class="text-center"> <button class="animated button">Button</button></p>
                         </div>
                     </div>
                 </div>
                 <!-- If we need pagination -->
-
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
                 <!-- If we need scrollbar -->
             </div>
-
         </div>
     </div>
 </div>
@@ -66,67 +40,74 @@
         <!-- TODO: I should ad support for .webm also and mesidž for not supported browsers -->
     </video>
 </div>
-
 </div>
-
 <!-- --------------------- NEWEST BLOG POSTS ----------------------------------->
-
-
-
 <div class="blogPostsDiv ">
+
     <h1 class="headline">Newest blog posts</h1>
     <div class="blogTagsList">
-        <a class="tag" href="#">Health</a>
-        <a class="tag" href="#">Health</a>
-        <a class="tag activeTag" href="#">Health</a>
-        <a class="tag" href="#">Health</a>
-        <a class="tag activeTag" href="#">Health</a>
-        <a class="tag activeTag" href="#">Health</a>
+        <?php
+$tags = get_tags();
+$html = '<div class="blogTagsList">';
+foreach ($tags as $tag) {
+    $tag_link = get_tag_link($tag->term_id);
+    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
+    $html .= "{$tag->name}</a>";
+}
+$html .= '</div>';
+echo $html;
+?>
     </div>
-
     <div class="card-carousel">
         <?php
-        $the_query = new WP_Query(array(
-            // 'category_name' => 'news',
-            'posts_per_page' => 3,
-        ));
-        ?>
-        <?php if ($the_query->have_posts()) : ?>
-            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <div class="blogPost my-card">
-
-                    <?php if (has_post_thumbnail()) : ?>
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="blogImg ">
-                            <?php the_post_thumbnail(); ?>
-                        </a>
-                    <?php else : ?>
-                        <img class="blogImg" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
-                    <?php endif; ?>
-
-                    <a href="<?php the_permalink(); ?>">
-                        <h3 class="blogHeadline"> <?php the_title(); ?></h3>
+$the_query = new WP_Query(array(
+    // 'category_name' => 'news',
+    'posts_per_page' => 3,
+));
+?>
+        <?php if ($the_query->have_posts()): ?>
+            <?php while ($the_query->have_posts()): $the_query->the_post();?>
+								                <div class="blogPost my-card">
+								                    <?php if (has_post_thumbnail(the_post())): ?>
+								                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
+								                        <!-- <div id="custom-bg" style="background-image: url('<?php // echo $image[0];
+    ?>')">
+								                            </div> -->
+								                        <div class="blogImg" data-setbg="<?php echo $image[0]; ?>"></div>
+								                    <?php endif;?>
+                    <a href="<?php the_permalink();?>">
+                        <h3 class="blogHeadline"> <?php the_title();?></h3>
                     </a>
                     <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
-                    <p>
-                        <?php the_excerpt(); ?>
-                    </p>
+
+                        <?php the_excerpt();?>
+
                     <br />
                     <div class="blogTagsList">
-                        <a class="tag activeTag" href="#">Health</a>
-                        <a class="tag activeTag" href="#">Health</a>
+                        <?php
+$tags = get_tags();
+$html = '';
+foreach ($tags as $tag) {
+    $tag_link = get_tag_link($tag->term_id);
+    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
+    $html .= "{$tag->name}</a>";
+}
+echo $html;
+
+?>
+                        <!-- the_tags('Tags: ', ', ', '<br />'); ?> -->
+
                     </div>
                 </div>
-
-
-            <?php endwhile; ?>
-
-            <?php wp_reset_postdata(); ?>
-        <?php else : ?>
+            <?php endwhile;?>
+            <?php wp_reset_postdata();?>
+        <?php else: ?>
             <p><?php echo ('No News'); ?></p>
-        <?php endif; ?>
-
+        <?php endif;
+wp_reset_query();
+?>
     </div>
-    <!--  
+    <!--
             1. wp loop
             2. limitation for first 3 posts
             3. author
@@ -134,6 +115,11 @@
             5. tag/cat
          -->
 
+    <div class="text-center callToAction">
+            <h1 class="headline">Let's start tellng your own story!</h1>
+            <button class="animated button">I want to contribute!</button>
+
+    </div>
 </div>
 <!--
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
@@ -155,127 +141,46 @@
 -->
 <!------------------------------- IMAGE GRID -------------------------------->
 
-<?php echo na_get_gallery_image_urls(128); ?>
+
+
 
 <div class="imageGridDiv">
     <div class="displayFlex customImageGridFlex">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                </div>
-                <div class="flip-card-back">
-                    <a href="#">
-                        <h3>John DoeImage Headline</h3>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+
+        <?php
+$theQuery = new WP_Query(array(
+    'posts_per_page' => 4,
+));
+if ($theQuery->have_posts()): while ($theQuery->have_posts()): $theQuery->the_post();
+        echo "ere";
+        if (has_post_thumbnail(the_post())):
+            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+            ?>
+						<div class="flip-card">
+						<div class="flip-card-inner">
+						    <div class="flip-card-front" data-setbg="<?php echo $image[0]; ?>">
+						    </div>
+						    <div class="flip-card-back">
+						        <a href="#">
+						            <h3><?php the_title();?></h3>
+						            <p> <?php echo substr(get_the_excerpt(), 0, 100) . "…";
+            ?>
+						            </p>
+						        </a>
+						    </div>
+						</div>
+						</div>
+                                <?php endif;
+        
+
+    endwhile;
+endif;
+
+?>
+
     </div>
 </div>
-
-
-
-
-
 <!--------------------- ABOUT US _--------------------------------------------->
 <div class="aboutUsDiv">
     <h1 class="headline">About Us</h1>
@@ -293,7 +198,7 @@
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p>
         </div>
-        <img class="aboutUsRight" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+        <img class="aboutUsRight" alt="x" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
     </div>
     <div class="aboutUsRow">
         <div class="aboutUsRightText aboutUsText">
@@ -309,7 +214,7 @@
                 itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
             </p>
         </div>
-        <img class="aboutUsLeft" alt="" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+        <img class="aboutUsLeft" alt="x" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
     </div>
 </div>
 <!-----------------NEWSLETTER ___________________________________-->
@@ -328,8 +233,7 @@
             </div>
             <div class="newsletterWrapper">
                 <div class="newsletterContent">
-
-                    <form action="" method="post" class="newsletterForm">
+                    <form action="post" method="post" class="newsletterForm">
                         <input class="newsletterInput" type="text" name="name" placeholder="Name" />
                         <input class="newsletterInput" type="text" name="email" placeholder="e-mail address" />
                         <input type="submit" value="Subscribe" class="button animated">
@@ -343,7 +247,7 @@
 <div class="contactDiv">
     <h1 class="headline">Contact</h1>
     <div class="displayFlex">
-        <form action="" method="post" class="contactForm" id="contactForm">
+        <form action="post" method="post" class="contactForm" id="contactForm">
             <input class="formContent" type="text" name="name" placeholder="Name" />
             <input class="formContent" type="text" name="subject" placeholder="Subject" />
             <input class="formContent" type="text" name="email" placeholder="e-mail address" />
@@ -370,12 +274,10 @@
         </div>
     </div>
 </div>
-
 <script>
     $num = $('.my-card').length;
     $even = $num / 2;
     $odd = ($num + 1) / 2;
-
     if ($num % 2 == 0) {
         $('.my-card:nth-child(' + $even + ')').addClass('active');
         $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
@@ -385,11 +287,9 @@
         $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
         $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
     }
-
     $('.my-card').click(function() {
         $slide = $('.active').width();
         console.log($('.active').position().left);
-
         if ($(this).hasClass('next')) {
             $('.card-carousel').stop(false, true).animate({
                 left: '-=' + $slide
@@ -399,16 +299,12 @@
                 left: '+=' + $slide
             });
         }
-
         $(this).removeClass('prev next');
         $(this).siblings().removeClass('prev active next');
-
         $(this).addClass('active');
         $(this).prev().addClass('prev');
         $(this).next().addClass('next');
     });
-
-
     // Keyboard nav
     $('html body').keydown(function(e) {
         if (e.keyCode == 37) { // left
@@ -418,5 +314,4 @@
         }
     });
 </script>
-
-<?php get_footer(); ?>
+<?php get_footer();?>
