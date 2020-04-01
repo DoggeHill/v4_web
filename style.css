@@ -613,20 +613,6 @@ a:hover {
     .blogRight {
       width: 100%; } }
 
-.blogMostRead {
-  background-color: red;
-  height: 200px;
-  margin-bottom: 10%; }
-  @media all and (max-width: 768px) {
-    .blogMostRead {
-      width: 100%; } }
-
-.blogCategories {
-  background-color: blue;
-  height: 200px; }
-  @media all and (max-width: 768px) {
-    .blogCategories {
-      width: 100%; } }
 
 .blogTop {
   display: flex;
@@ -650,12 +636,13 @@ a:hover {
     .blogTop .blogSlider {
       width: 100%; } }
 
-.blogTop .blogTopPost {
-  width: 30%;
-  background-color: green; }
-  @media all and (max-width: 768px) {
-    .blogTop .blogTopPost {
-      width: 100%; } }
+
+.blogTopPost .blogHeadline {
+  color: White;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+}
 
 .blogSlider .swiper-slide {
   height: 100%;
@@ -675,6 +662,34 @@ a:hover {
 
 .blogSlider .blogHeadline:hover {
   color: #41AE65; }
+
+.blogMostReadPost {
+  display: flex;
+  margin-bottom: 10%;
+}
+
+.blogMostReadPost .blogHeadline {
+  width: 60%;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.blogMostReadPost .blogHeadline a {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.blogMostReadPost .blogImage {
+  float: right;
+  width: 40%;
+  height: auto;
+}
+
+.blogMostReadHeadline {
+  font-weight: bold;
+  margin-top: 0;
+}
 
 .headerDiv {
   position: relative;
