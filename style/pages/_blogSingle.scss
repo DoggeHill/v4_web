@@ -1,0 +1,51 @@
+.singleDiv {
+    width: 100%;
+    padding: 5% 15% 5% 15%;
+    margin-bottom: 8%;
+}
+.singleContent {
+    width: 100%;
+    display: flex;
+    @media all and (max-width: $break-1){
+        display: block;
+    }
+}
+.singleMain {
+    width: 70%;
+    margin-right: 5%;
+    @media all and (max-width: $break-1){
+        width: 100%;
+        margin-bottom: 100px !important;
+    }
+}
+.singleSidebar {
+    width: 25%;
+    box-sizing: border-box;
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
+}
+.singleNav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.singleSidebar .blogTagsList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+}
+.singleSidebar .blogTagsList .tag{
+    width: 47.5%;
+    margin-bottom: 5%;
+}
+.singleSidebar form .formContent {
+    margin-bottom: 15px;
+}
+.singleSidebar .iconsList {
+    display: flex;
+    justify-content: space-between;
+}

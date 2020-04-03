@@ -122,7 +122,10 @@
                     <div class="blogHeadline">
                         <a href="#">Niaky fajny post Headline pre najcitanejsie posty</a>
                     </div>
-                    <img class="blogImage" src="http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg" />
+                    <div class="blogImage">
+
+                    </div>
+
                 </div>
                 <div class="blogMostReadPost">
                     <div class="blogHeadline">

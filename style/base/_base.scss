@@ -15,6 +15,9 @@ h1 {
     color: $green1;
     margin: 0;
 }
+h2 {
+    font-weight: bold;
+}
 .displayFlex {
     display: flex;
     position: relative;
@@ -49,6 +52,9 @@ a:hover {
 *::-moz-selection {
     background-color: $green1;
     color: $white1;
+}
+hr {
+    border-top: 2px solid $green1;
 }
 
 
