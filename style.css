@@ -915,6 +915,35 @@ hr {
   margin-top: 0;
 }
 
+.blogPosts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media all and (max-width: 768px) {
+  .blogPosts {
+    display: block;
+  }
+}
+
+.blogPosts .blogPost {
+  width: 30%;
+}
+@media all and (max-width: 992px) {
+  .blogPosts .blogPost {
+    width: 47.5%;
+  }
+}
+@media all and (max-width: 768px) {
+  .blogPosts .blogPost {
+    width: 100%;
+  }
+}
+
+.blogPostsBottomNav {
+  float: right;
+}
+
 .singleDiv {
   width: 100%;
   padding: 5% 15% 5% 15%;

@@ -164,3 +164,23 @@
     font-weight: bold;
     margin-top: 0;
 }
+.blogPosts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media all and (max-width: $break-1){
+        display: block;
+    }
+}
+.blogPosts .blogPost {
+    width: 30%;
+    @media all and (max-width: $break-2){
+        width: 47.5%;
+    }
+    @media all and (max-width: $break-1){
+        width: 100%;
+    }
+}
+.blogPostsBottomNav {
+    float: right;
+}
