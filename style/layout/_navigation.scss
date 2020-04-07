@@ -10,12 +10,12 @@
 }
 .navbar-collapse.collapse {
   display: flex !important;
-  @media all and (max-width: $break-1){
+  @media all and (max-width: $break-1) {
     display: block !important;
   }
 }
 .navigation a {
-  color:$white1;
+  color: $white1;
 }
 .menu ul li {
   width: 100%;
@@ -31,14 +31,10 @@
 .nav li {
   width: 100%;
   text-align: center;
-} 
-.nav li a:hover{
+}
+.nav li a:hover {
   border-bottom: 2px solid $green1;
   background-color: transparent;
-
-
-
-
 }
 .nav {
   display: flex;
@@ -46,7 +42,6 @@
   @media all and (max-width: 992px) {
     display: block;
   }
-
 }
 .navbar {
   margin-bottom: 0;
@@ -56,7 +51,6 @@
 }
 .container-fluid > .navbar-collapse {
   margin: 0;
-
 }
 .navbar-brand {
   float: right;
@@ -78,14 +72,15 @@
   display: flex !important;
 }
 .navProfileImg {
+  background-size: contain;
   border-radius: 50%;
   flex: 1;
   height: 50px;
+  width: 50px;
   margin: 5px;
 }
 .navProfile div div {
   flex: 5;
-
 }
 .navProfile {
   width: -moz-max-content;

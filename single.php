@@ -1,5 +1,8 @@
 <?php get_header(); ?>
 <div class="singleDiv">
+
+
+
     <p>< <a href="#">Blog</a> < <a href="#">Tuna pojde dajaký textík určite niečo dlhšie</a></p>
     <div class="singleContent">
         <div class="singleMain">

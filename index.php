@@ -1,12 +1,12 @@
-<?php get_header()?>
+<?php get_header() ?>
 <!-------------------------------HEADER------------------------------->
 <div class="headerDiv">
     <div class="displayFlex">
         <ul class="iconsList">
-            <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
-            <li><a target="_blank" href="#"><i class="fa fa-instagram icon fa-3x" aria-hidden="true"></i></a></li>
-            <li><a target="_blank" href="#"><i class="fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
-            <li><a target="_blank" href="#"><i class="fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
+            <li><a target="_blank" href="#"><i class="animate fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
+            <li><a target="_blank" href="#"><i class="animate fa fa-instagram icon fa-3x" aria-hidden="true"></i></a></li>
+            <li><a target="_blank" href="#"><i class="animate fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
+            <li><a target="_blank" href="#"><i class="animate fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
         </ul>
         <div class="headerContentDiv">
             <div class="swiper-container">
@@ -16,12 +16,31 @@
                     <div class="swiper-slide">
                         <div class="headerContent">
                             <h1 class="headline text-center">This is your ecological approach</h1>
-                            <p class="headline-text text-center">Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi
-                                . Donec id nisl. Aliquam erat volutpat. Integer fring [...]
+                            <p class="headline-text text-center">Find your ecological inspiration here [...]
                             </p>
                         </div>
                         <div class="header-button">
-                            <p class="text-center"> <button class="animated button">Button</button></p>
+                            <p class="text-center"> <button class="animated button">Want to learn more!</button></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="headerContent">
+                            <h1 class="headline text-center">This is your ecological site</h1>
+                            <p class="headline-text text-center">Share your own vision about ecology with us [...]
+                            </p>
+                        </div>
+                        <div class="header-button">
+                            <p class="text-center"> <button class="animate button">Start writing!</button></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="headerContent">
+                            <h1 class="headline text-center">Stay informed</h1>
+                            <p class="headline-text text-center">Stay informed and await the latest green news from us [...]
+                            </p>
+                        </div>
+                        <div class="header-button">
+                            <p class="text-center"> <button class="animate button">Be informed</button></p>
                         </div>
                     </div>
                 </div>
@@ -43,69 +62,63 @@
 </div>
 <!-- --------------------- NEWEST BLOG POSTS ----------------------------------->
 <div class="blogPostsDiv ">
-
     <h1 class="headline">Newest blog posts</h1>
     <div class="blogTagsList">
         <?php
-$tags = get_tags();
-$html = '<div class="blogTagsList">';
-foreach ($tags as $tag) {
-    $tag_link = get_tag_link($tag->term_id);
-    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
-    $html .= "{$tag->name}</a>";
-}
-$html .= '</div>';
-echo $html;
-?>
+        $tags = get_tags();
+        $html = '<div class="blogTagsList">';
+        foreach ($tags as $tag) {
+            $tag_link = get_tag_link($tag->term_id);
+            $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
+            $html .= "{$tag->name}</a>";
+        }
+        $html .= '</div>';
+        echo $html;
+        ?>
     </div>
     <div class="card-carousel">
         <?php
-$the_query = new WP_Query(array(
-    // 'category_name' => 'news',
-    'posts_per_page' => 3,
-));
-?>
-        <?php if ($the_query->have_posts()): ?>
-            <?php while ($the_query->have_posts()): $the_query->the_post();?>
-								                <div class="blogPost my-card">
-								                    <?php if (has_post_thumbnail(the_post())): ?>
-								                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
-								                        <!-- <div id="custom-bg" style="background-image: url('<?php // echo $image[0];
-    ?>')">
+        $the_query = new WP_Query(array(
+            // 'category_name' => 'news',
+            'posts_per_page' => 3,
+        ));
+        ?>
+        <?php if ($the_query->have_posts()) : ?>
+            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                <div class="blogPost my-card">
+                    <?php if (has_post_thumbnail(the_post())) : ?>
+                        <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
+                        <!-- <div id="custom-bg" style="background-image: url('<?php // echo $image[0];
+                                                                                ?>')">
 								                            </div> -->
-								                        <div class="blogImg" data-setbg="<?php echo $image[0]; ?>"></div>
-								                    <?php endif;?>
-                    <a href="<?php the_permalink();?>">
-                        <h3 class="blogHeadline"> <?php the_title();?></h3>
+                        <div class="blogImg" style=" background-image: url('<?php echo $image[0]; ?>')"></div>
+                    <?php endif; ?>
+                    <a href="<?php the_permalink(); ?>">
+                        <h3 class="blogHeadline"> <?php the_title(); ?></h3>
                     </a>
                     <p class="subBlogHeadline"><?php echo get_the_date(); ?></p>
-
-                        <?php the_excerpt();?>
-
+                    <?php the_excerpt(); ?>
                     <br />
                     <div class="blogTagsList">
                         <?php
-$tags = get_tags();
-$html = '';
-foreach ($tags as $tag) {
-    $tag_link = get_tag_link($tag->term_id);
-    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
-    $html .= "{$tag->name}</a>";
-}
-echo $html;
-
-?>
+                        $tags = get_tags();
+                        $html = '';
+                        foreach ($tags as $tag) {
+                            $tag_link = get_tag_link($tag->term_id);
+                            $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug} tag activeTag'>";
+                            $html .= "{$tag->name}</a>";
+                        }
+                        echo $html;
+                        ?>
                         <!-- the_tags('Tags: ', ', ', '<br />'); ?> -->
-
                     </div>
                 </div>
-            <?php endwhile;?>
-            <?php wp_reset_postdata();?>
-        <?php else: ?>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        <?php else : ?>
             <p><?php echo ('No News'); ?></p>
         <?php endif;
-wp_reset_query();
-?>
+        ?>
     </div>
     <!--
             1. wp loop
@@ -114,11 +127,9 @@ wp_reset_query();
             4. date
             5. tag/cat
          -->
-
     <div class="text-center callToAction">
-            <h1 class="headline">Let's start tellng your own story!</h1>
-            <button class="animated button">I want to contribute!</button>
-
+        <h1 class="headline">Let's start tellng your own story!</h1>
+        <button class="animated button">I want to contribute!</button>
     </div>
 </div>
 <!--
@@ -140,89 +151,127 @@ wp_reset_query();
 </script>
 -->
 <!------------------------------- IMAGE GRID -------------------------------->
-
-
-
-
 <div class="imageGridDiv">
     <div class="displayFlex customImageGridFlex">
-
-
+        <?php wp_reset_postdata(); ?>
         <?php
-$theQuery = new WP_Query(array(
-    'posts_per_page' => 4,
-));
-if ($theQuery->have_posts()): while ($theQuery->have_posts()): $theQuery->the_post();
-        echo "ere";
-        if (has_post_thumbnail(the_post())):
-            $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
-            ?>
-						<div class="flip-card">
-						<div class="flip-card-inner">
-						    <div class="flip-card-front" data-setbg="<?php echo $image[0]; ?>">
-						    </div>
-						    <div class="flip-card-back">
-						        <a href="#">
-						            <h3><?php the_title();?></h3>
-						            <p> <?php echo substr(get_the_excerpt(), 0, 100) . "…";
-            ?>
-						            </p>
-						        </a>
-						    </div>
-						</div>
-						</div>
-                                <?php endif;
-        
-
-    endwhile;
-endif;
-
-?>
-
+        $the_query2 = new WP_Query(array(
+            // 'category_name' => 'news',
+            'posts_per_page' => 10,
+        ));
+        ?>
+        <?php if ($the_query2->have_posts()) : ?>
+            <?php while ($the_query2->have_posts()) : $the_query2->the_post(); ?>
+                <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');
+                ?>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front" style=" background-image: url('<?php echo $image[0]; ?>')">
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="#">
+                                <h3><?php the_title(); ?></h3>
+                                <p> <?php echo substr(get_the_excerpt(), 0, 100) . "…";
+                                    ?>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        <?php
+            endwhile;
+        endif;
+        ?>
     </div>
 </div>
 <!--------------------- ABOUT US _--------------------------------------------->
+<script>
+    $(document).ready(function() {
+        $background = $('.aboutUsDiv');
+        console.log("hover");
+        $('.navigation_fancy__checkbox').hover(function() {
+            $background.addClass('navigation_fancy__background');
+            $('.navigation_fancy__checkbox').addClass('none');
+            $(this).removeClass('none');
+            console.log("hover");
+        });
+        $('.navigation_fancy__checkbox').mouseleave(function() {
+            $('.navigation_fancy__checkbox').removeClass('none');
+            $background.removeClass('navigation_fancy__background');
+        });
+
+
+
+
+    });
+</script>
+
+
 <div class="aboutUsDiv">
-    <h1 class="headline">About Us</h1>
-    <div class="aboutUsRow">
-        <div class="aboutUsLeft aboutUsText">
-            <h3 class="headline">Tuna pojde dajaký textík určite niečo dlhšie</h3>
-            <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius na ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
-                Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
-                itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-            </p><br />
-            <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius sit a ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
-                Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
-                itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-            </p>
-        </div>
-        <img class="aboutUsRight" alt="x" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+
+
+
+    <div class="">&nbsp;
     </div>
-    <div class="aboutUsRow">
-        <div class="aboutUsRightText aboutUsText">
-            <h3 class="headline">Tuna pojde dajaký textík určite niečo dlhšie</h3>
-            <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, variut urna ante id mi. Quisque commodo facilisis tellus. Integer sodales lorem sed nisl.
-                Morbi consectetuer mauris quis odio. Ut dolor lorem, viverra v
-                itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-            </p><br />
-            <p>hasellus purus. Etiam sapien. Duis diam urna, iaculis ut,
-                vehicula ac, varius sit amet, mi. Donec id nisl. Aliquam erat
-                volutpat. Integer fringillviverra v
-                itae, viverra eu, euismod nec, enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-            </p>
+    <h1 class="headline">About Us</h1>
+    <div class="aboutUsRow navigation_fancy">
+        <div class="first navigation_fancy__checkbox">
+            <nav class="navigation_fancy__nav">
+                <ul class="navigation_fancy__list">
+                    <li class="navigation_fancy__item">
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <img class="aboutUsLeft" alt="x" src="https://hackernoon.com/hn-images/1*EntHChgUyirgbZ9A3zTxkA.png" />
+        <div class="second navigation_fancy__checkbox">
+            <nav class="navigation_fancy__nav">
+                <ul class="navigation_fancy__list">
+                    <li class="navigation_fancy__item">
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="aboutUsRow middleRow navigation_fancy">
+        <div class="middle navigation_fancy__checkbox">
+            <nav class="navigation_fancy__nav">
+                <ul class="navigation_fancy__list">
+                    <li class="navigation_fancy__item">
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="aboutUsRow navigation_fancy">
+        <div class="third navigation_fancy__checkbox">
+            <nav class="navigation_fancy__nav">
+                <ul class="navigation_fancy__list">
+                    <li class="navigation_fancy__item">
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="forth navigation_fancy__checkbox">
+            <nav class="navigation_fancy__nav">
+                <ul class="navigation_fancy__list">
+                    <li class="navigation_fancy__item">
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
 <!-----------------NEWSLETTER ___________________________________-->
 <div class="newsletterDiv">
     <div class="newsletter">
         <div class="displayFlex">
-            <div class="newsletterWrapper newsletterImg" data-setbg="<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png">
-                <div class="newsletterContent">
+            <div class="newsletterWrapper newsletterImg" style="background-image: url('<?php echo get_bloginfo('template_directory'); ?>/images/newsletter.png')">
+                <div class=" newsletterContent">
                     <h1 class="headline">Newsletter</h1>
                     <p>Phasellus purus. Etiam sapien. Duis diam urna, iaculis ut, vehicula ac, varius sit amet, mi. Don
                         ec id nisl. Aliquam erat volut
@@ -314,4 +363,4 @@ endif;
         }
     });
 </script>
-<?php get_footer();?>
+<?php get_footer(); ?>

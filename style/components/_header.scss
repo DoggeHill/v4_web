@@ -1,59 +1,79 @@
 .headerDiv {
-    position: relative;
-    padding: 2% 15% 2% 15%;
-    padding-bottom: 8%;
-    color: white;
+  position: relative;
+  padding: 2% 15% 2% 15%;
+  padding-bottom: 8%;
+  color: white;
 }
 .headerDiv .headline {
-    color: white;
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
+  color: white;
+  display: block;
+  font-size: 5.5rem;
+  font-weight: 400;
+  letter-spacing: 2rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
 
 }
+
+@media (max-width: $break-2) {
+  .headerDiv .headline {
+    letter-spacing: 1rem;
+    font-size: 4rem;
+  }
+}
+@media (max-width: $break-1) {
+  .headerDiv .headline {
+    letter-spacing: 0.4rem;
+    font-size: 2.2rem;
+  }
+}
+
+
+
+// $break-1: 768px;
+// $break-2: 992px;
+
+
 .headerDiv .headline-text {
-    max-width: 80%;
-    margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+  max-width: 80%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .swiper-slide {
   padding: 2em;
-    margin: 0!important;
+  margin: 0 !important;
 }
 .swiper-container {
-    height: inherit;
+  height: inherit;
 }
 .headerContent {
-    height: auto;
+  height: auto;
+  width: 100%;
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 100%;
+  @media all and (max-width: $break-1) {
     width: 100%;
-    position: relative;
-    padding-left: 5%;
-    padding-right: 5%;
-    height: 100%;
-    @media all and (max-width: $break-1){
-        width: 100%;
-    }
+  }
 }
 .headerContentDiv {
-    position: absolute;
-    margin-left: 10%;
-    width: 90%;
-    @media all and (max-width: $break-1){
-        position: relative;
-        width: 100%;
-        margin-left: 0;
-    }
+  position: absolute;
+  margin-left: 10%;
+  width: 90%;
+  @media all and (max-width: $break-1) {
+    position: relative;
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .headerContent .button {
-    position: absolute;
-    bottom: 0;
-    @media all and (max-width: $break-1){
-        position: relative;
-        margin-top: 5%;
-    }
+  position: absolute;
+  bottom: 0;
+  @media all and (max-width: $break-1) {
+    position: relative;
+    margin-top: 5%;
+  }
 }

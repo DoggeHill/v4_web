@@ -1,60 +1,157 @@
 .aboutUsDiv {
-    padding: 2% 15% 2% 15%;
-    margin-bottom: 8%;
+  padding: 2% 15% 2% 15%;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 8%;
+}
+.aboutUsDiv .headline {
+  margin-bottom: 8%;
+}
+.aboutUsRow > div {
+  background-image: url("https://s3.eu-central-1.amazonaws.com/uploads.mangoweb.org/shared-prod/visegradfund.org/uploads/2018/01/visegrad_fund_logo_blue_800px-1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15vw;
+  height: 10vw;
+  @media all and (max-width: $break-1) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.aboutUsRow {
+  overflow: hidden;
+  position: relative;
+  height: auto;
+
+  @media all and (max-width: $break-1) {
+    flex-direction: column;
+    overflow: hidden;
     position: relative;
     height: auto;
-    overflow: hidden;
+    margin-bottom: 0%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+  }
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
 }
-.aboutUsDiv img {
-    width: 50%;
-    display:flex;
-    height: auto;
-    @media all and (max-width: $break-1){
-        width: 100%;
-    }
 
+.middleRow {
+  justify-content: center !important;
 }
+
 .aboutUsText {
-    position: absolute;
-    width: 40%;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  @media all and (max-width: $break-1) {
+    position: relative;
+    top: 0;
+    width: 100%;
     height: auto;
-    @media all and (max-width: $break-1){
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: auto;
-        transform: none;
-        margin-bottom: 5%;
-    }
+    transform: none;
+    margin-bottom: 5%;
+  }
 }
 .aboutUsLeft {
-    float: left;
-    @media all and (max-width: $break-1){
-        float: none;
-    }
+  float: left;
+  @media all and (max-width: $break-1) {
+    float: none;
+  }
 }
 .aboutUsRight {
-    float: right;
-    @media all and (max-width: $break-1){
-        float: none;
-    }
+  float: right;
+  @media all and (max-width: $break-1) {
+    float: none;
+  }
 }
 .aboutUsRightText {
-    float: right;
-    left: 60%;
-    @media all and (max-width: $break-1){
-        float: none;
-        left: 0;
-    }
+  float: right;
+  left: 60%;
+  @media all and (max-width: $break-1) {
+    float: none;
+    left: 0;
+  }
 }
-.aboutUsRow {
-    overflow: hidden;
-    position: relative;
-    height: auto;
-    margin-bottom: 5% ;
-    @media all and (max-width: $break-1){
-        overflow: auto;
+
+.navigation_fancy {
+  &__background {
+
+   position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    z-index: 1000;
+    transition: transform 0.8s;
+    -webkit-transition: transform 0.8s;
+    -moz-transition: transform 0.8s;
+    -ms-transition: transform 0.8s;
+    -o-transition: transform 0.8s;
+  }
+  &__nav {
+    z-index: 1500;
+    opacity: 0;
+    width: 100%;
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
+
+  &__list {
+    z-index: 1700;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+  &__item {
+    z-index: 1700;
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 300;
+      padding: 1rem 2rem;
+      color: $white1;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $white1 50%
+      );
+      background-size: 220%;
+      transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+
+      span {
+        margin-right: 1.5rem;
+        display: inline-block;
+      }
     }
+  }
+
+  //FUNCTIONALITY
+  &__checkbox:hover &__nav {
+    opacity: 100;
+    width: 100%;
+  }
+  &__checkbox:hover > &__background {
+    background-image: radial-gradient($green1, $green2);
+  }
 }

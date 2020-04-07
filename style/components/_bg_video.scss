@@ -4,6 +4,12 @@
   height: 80vh;
 }
 
+@media (max-width: $break-1) {
+  .video-wrapper {
+    height: 100vh;
+  }
+}
+
 .bg-video {
   position: absolute;
   top: 0;

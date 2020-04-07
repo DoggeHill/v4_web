@@ -8,14 +8,14 @@
 .blogPost {
     margin: 3% 5% 3% 0;
     width: 30%;
-    @media all and (max-width: $break-1){
-        width: 100%;
-        margin: 3% 5% 20% 0;
-    }
 }
-.blogPost img {
-    box-sizing: border-box;
+.blogPost .blogImg {
+    height: 250px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
 }
 .blogPost h3{
     margin-top: 1%;
@@ -41,12 +41,20 @@
     }
 }
 .callToAction h1{
-    padding: 2% 15% 2% 15%;
+    padding-left: 2%;
+    padding-right: 2%;
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
+    margin-bottom: 8%;;
+}
+@media (max-width: $break-1){
+    .callToAction h1{
+        font-size: 4rem;
+        letter-spacing: 1.5rem;
+    }
 }
 
 .callToAction button{

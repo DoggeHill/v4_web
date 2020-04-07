@@ -33,7 +33,7 @@
             </ul>
          </div>
          <div class="footerCategories footerElement">
-             <h2 class="headline">Categories:</h2>
+             <h2 class="headline">Cats:</h2>
              <ul>
                  <li><a href="#">category</a></li>
                  <li><a href="#">category</a></li>
