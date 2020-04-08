@@ -674,6 +674,10 @@ hr {
   height: 250px;
   max-height: 250px; }
 
+.blogImg div {
+  height: inherit;
+  width: inherit; }
+
 .blogRight {
   width: 30%; }
   @media all and (max-width: 992px) {
@@ -722,7 +726,6 @@ hr {
 .blogTop .blogTopPost {
   width: 30%;
   position: relative;
-  background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
@@ -740,7 +743,6 @@ hr {
   height: 100%;
   padding: 0;
   margin: 0;
-  background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1008,7 +1010,7 @@ footer .headline {
       display: block !important; } }
 
 .navigation a {
-  color: White; }
+  color: #41AE65; }
 
 .menu ul li {
   width: 100%;
@@ -1240,7 +1242,10 @@ footer .headline {
   @media all and (max-width: 768px) {
     .aboutUsRow > div {
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto;
+      width: 30vw;
+      height: unset;
+      padding-bottom: 100px; } }
 
 .aboutUsRow {
   overflow: hidden;
@@ -1328,17 +1333,18 @@ footer .headline {
 
 .navigation_fancy__item {
   z-index: 1700;
-  margin: 1rem; }
+  margin: 1rem;
+  color: #41AE65; }
 
 .navigation_fancy__link:link, .navigation_fancy__link:visited {
   display: inline-block;
   font-size: 2rem;
   font-weight: 300;
   padding: 1rem 2rem;
-  color: White;
+  color: green1;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, White 50%);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #41AE65 50%);
   background-size: 220%;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -1348,10 +1354,3 @@ footer .headline {
   .navigation_fancy__link:link span, .navigation_fancy__link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
-
-.navigation_fancy__checkbox:hover .navigation_fancy__nav {
-  opacity: 100;
-  width: 100%; }
-
-.navigation_fancy__checkbox:hover > .navigation_fancy__background {
-  background-image: radial-gradient(#41AE65, #C4E9D1); }

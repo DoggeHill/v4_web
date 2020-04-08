@@ -51,7 +51,10 @@
     height: 250px;
     max-height: 250px;
 }
-
+.blogImg div{
+    height: inherit;
+    width: inherit;
+}
 .blogRight {
     width: 30%;
     @media all and (max-width: $break-2){
@@ -104,7 +107,6 @@
 .blogTop .blogTopPost {
     width: 30%;
     position: relative;
-    background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -123,7 +125,6 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    background-image: url("http://getwallpapers.com/wallpaper/full/6/f/6/853576-vertical-green-leaves-wallpaper-1920x1200.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

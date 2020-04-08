@@ -187,30 +187,25 @@
 <!--------------------- ABOUT US _--------------------------------------------->
 <script>
     $(document).ready(function() {
+        var background_image = "";
         $background = $('.aboutUsDiv');
-        console.log("hover");
         $('.navigation_fancy__checkbox').hover(function() {
-            $background.addClass('navigation_fancy__background');
+            //$background.fadeIn().addClass('navigation_fancy__background');
             $('.navigation_fancy__checkbox').addClass('none');
             $(this).removeClass('none');
-            console.log("hover");
+            $(this).find('.navigation_fancy__nav').css('opacity', '1');
+            $(this).css('background-size', '0');
+            $(this).find('.navigation_fancy__checkbox').css('background-image', 'none');
         });
         $('.navigation_fancy__checkbox').mouseleave(function() {
+            $(this).css('background-size', '100%');
             $('.navigation_fancy__checkbox').removeClass('none');
             $background.removeClass('navigation_fancy__background');
+            $(this).find('.navigation_fancy__nav').css('opacity', '0');
         });
-
-
-
-
     });
 </script>
-
-
 <div class="aboutUsDiv">
-
-
-
     <div class="">&nbsp;
     </div>
     <h1 class="headline">About Us</h1>
@@ -219,7 +214,7 @@
             <nav class="navigation_fancy__nav">
                 <ul class="navigation_fancy__list">
                     <li class="navigation_fancy__item">
-                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Czech Republic + description</a>
                     </li>
                 </ul>
             </nav>
@@ -228,7 +223,7 @@
             <nav class="navigation_fancy__nav">
                 <ul class="navigation_fancy__list">
                     <li class="navigation_fancy__item">
-                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Poland + description</a>
                     </li>
                 </ul>
             </nav>
@@ -239,7 +234,7 @@
             <nav class="navigation_fancy__nav">
                 <ul class="navigation_fancy__list">
                     <li class="navigation_fancy__item">
-                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Visegrad + description</a>
                     </li>
                 </ul>
             </nav>
@@ -250,7 +245,7 @@
             <nav class="navigation_fancy__nav">
                 <ul class="navigation_fancy__list">
                     <li class="navigation_fancy__item">
-                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Slovakia + description</a>
                     </li>
                 </ul>
             </nav>
@@ -259,7 +254,7 @@
             <nav class="navigation_fancy__nav">
                 <ul class="navigation_fancy__list">
                     <li class="navigation_fancy__item">
-                        <a href="#" class="navigation_fancy__link"><span>01</span>Description</a>
+                        <a href="#" class="navigation_fancy__link"><span>01</span>Hungary + description </a>
                     </li>
                 </ul>
             </nav>

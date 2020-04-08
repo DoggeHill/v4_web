@@ -17,29 +17,32 @@
              </p>
          </div>
          <ul class="iconsList footerIconsList footerElement">
-             <li><a target="_blank" href="#"><i class="fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
-             <li><a target="_blank" href="#"><i class="fa fa-instagram icon fa-3x" aria-hidden="true"></i></a></li>
-             <li><a target="_blank" href="#"><i class="fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
-             <li><a target="_blank" href="#"><i class="fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="animate fa fa-facebook-square icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="animate fa fa-instagram icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="animate fa fa-youtube-play icon fa-3x" aria-hidden="true"></i></a></li>
+             <li><a target="_blank" href="#"><i class="animate fa fa-google-plus-official icon fa-3x" aria-hidden="true"></i></a></li>
          </ul>
          <div class="footerMenu footerElement">
              <h2 class="headline">Menu:</h2>
-            <ul>
-                <li><a href="#">link</a></li>
-                <li><a href="#">link</a></li>
-                <li><a href="#">link</a></li>
-                <li><a href="#">link</a></li>
-                <li><a href="#">link</a></li>
-            </ul>
+             <ul>
+
+
+
+                 <?php wp_nav_menu($defaults); ?>
+
+
+
+             </ul>
          </div>
          <div class="footerCategories footerElement">
-             <h2 class="headline">Cats:</h2>
+             <h2 class="headline">Category:</h2>
              <ul>
-                 <li><a href="#">category</a></li>
-                 <li><a href="#">category</a></li>
-                 <li><a href="#">category</a></li>
-                 <li><a href="#">category</a></li>
-                 <li><a href="#">category</a></li>
+                 <?php $categories = get_categories('echo=0&number=5&show_count=1&orderby=count&order=DESC');
+                    foreach ($categories as $category) {
+                        echo '<li><a class="" href="' . $category->term_id . '">' . $category->name . "</a></li>";
+                    }
+
+                    ?>
              </ul>
          </div>
      </div>
@@ -50,7 +53,7 @@
  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
  <script src="<?php echo get_bloginfo('template_directory'); ?>/js/navigation.js"></script>
  <script>
-     var mySwiper = new Swiper ('.swiper-container', {
+     var mySwiper = new Swiper('.swiper-container', {
          // Optional parameters
          direction: 'horizontal',
          loop: true,
